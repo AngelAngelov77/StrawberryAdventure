@@ -6,7 +6,7 @@ Main class: Startup - creates instance of TheGame class. ToDo - to create loop f
 TheGame class - Singleton design pattern.
   To Do - Generates several Maps, Interface to create a hero - hero name and starting characteristics; damage calculation; methods for moving the hero, 
 
-Map class - represents a map, fas Width, Heights, Layout
+Map class - represents a map, has Width, Heights, Layout
   To Do - Generate random map, generate items for map, generate NPCs for map
 
 BasicItem class - abstract class, basic for all items
