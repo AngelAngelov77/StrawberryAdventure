@@ -20,3 +20,5 @@ BasicCharacter class - abstract class, basoc for our hero and for NPCs. ToDo to 
 Character class - class for our hero. ToDo successor of BasicCharacter.
 
 NPC class - clas for NPCs. ToDo successor of BasicCharacter, property Experience - how much experience npc gives our hero after been defeated.
+
+ToDo - Implementation of Chests, Potions(immediate and time effects)
