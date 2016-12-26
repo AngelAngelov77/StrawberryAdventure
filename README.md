@@ -13,12 +13,12 @@ BasicItem class - abstract class, basic for all items
 
 Weapon, BodyArmor, LeggingsArmor, FullArmor, Helmet, Gloves, Boots, Ring, Necklace - successors of BasicItem class
 
-BasicSkill class - abstract class, basic for all skills - To Do to make a constructor setting the properties, to create several successors, defining several classes of skills.
+BasicSkill class - abstract class, basic for all skills - To Do to make a constructor setting the properties, to create several successors, defining several classes of skills. Skill bonuses works as totalBonus = skillBasicBonus + skillLevel * skillPerLevelBonus
 
-BasicCharacter class - abstract class, basoc for our hero and for NPCs. ToDo to change file name from ICharacter.cs to BasicCharacter.cs, to create constructor.
+BasicCharacter class - abstract class, basic for our hero and for NPCs. ToDo to change file name from ICharacter.cs to BasicCharacter.cs, to create constructor.
 
 Character class - class for our hero. ToDo successor of BasicCharacter.
 
 NPC class - clas for NPCs. ToDo successor of BasicCharacter, property Experience - how much experience npc gives our hero after been defeated.
 
-ToDo - Implementation of Chests, Potions(immediate and time effects)
+ToDo - Implementation of Chests, Potions(immediate and time effects), logic for obstrucles(rock, tree, pit) on map.
