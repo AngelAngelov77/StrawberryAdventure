@@ -27,12 +27,19 @@ ToDo - Implementation of Chests, Potions(immediate and time (will not be impleme
 Optionally - to create method for visualisation of the map on Console
 
 Skills to be done:
+
 Weapon mastery - increases attack.
+
 Armor mastery - increases defense.
+
 Battle proficiency - increases accuracy.
+
 Agility - increases evasion.
+
 Iron body - increases HP (for increasing level with one - increasing HP with 5 or 10)
+
 Theft mastery - increases chest unlock chance
+
 
 To be done - experience needed to level up
 
