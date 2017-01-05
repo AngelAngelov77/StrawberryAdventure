@@ -35,6 +35,7 @@ Iron body - increases HP (for increasing level with one - increasing HP with 5 o
 Theft mastery - increases chest unlock chance
 
 To be done - experience needed to level up
+
 level 1 - 0 - 999 exp points(EP).
 
 level 2 - 1000 - 1999 EP. (+1000 EP to lvl up)
