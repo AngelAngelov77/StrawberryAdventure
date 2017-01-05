@@ -43,3 +43,4 @@ http://classic.battle.net/diablo2exp/basics/levels.shtml - Diablo 2 model
 https://us.battle.net/forums/en/d3/topic/12163276448 - Diablo 3 model
 http://www.heroesofmightandmagic.com/heroes3/leveladv.shtml - Heroes 3 model
 Implementation: array with int/long values, private method in Character class invoked after winning a battle to check if conditions for leveling up are met.
+
