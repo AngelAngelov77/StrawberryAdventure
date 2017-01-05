@@ -43,42 +43,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyArmor.cs" />
-    <Compile Include="BodyPositions.cs" />
-    <Compile Include="Boots.cs" />
-    <Compile Include="CharacterItemQuality.cs" />
-    <Compile Include="CharacterItemType.cs" />
-    <Compile Include="Chest.cs" />
-    <Compile Include="FullArmor.cs" />
-    <Compile Include="Gloves.cs" />
-    <Compile Include="Helmet.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="ICharacter.cs" />
-    <Compile Include="ICharacterInventory.cs" />
-    <Compile Include="BasicItem.cs" />
-    <Compile Include="IHuman.cs" />
-    <Compile Include="INPC.cs" />
-    <Compile Include="IPotion.cs" />
-    <Compile Include="BasicSkills.cs" />
-    <Compile Include="ItemsDrop.cs" />
-    <Compile Include="LeggingsArmor.cs" />
-    <Compile Include="Map.cs" />
-    <Compile Include="MapDificulty.cs" />
-    <Compile Include="MapObject.cs" />
-    <Compile Include="MapObjectType.cs" />
-    <Compile Include="Neckle.cs" />
-    <Compile Include="NPC.cs" />
-    <Compile Include="Potion.cs" />
-    <Compile Include="Skill.cs" />
+    <Compile Include="Character\ICharacter.cs" />
+    <Compile Include="General\Idetifiable.cs" />
+    <Compile Include="Items\BodyArmor.cs" />
+    <Compile Include="Character\BodyPositions.cs" />
+    <Compile Include="Items\Boots.cs" />
+    <Compile Include="General\CharacterItemQuality.cs" />
+    <Compile Include="General\CharacterItemType.cs" />
+    <Compile Include="TheGame\Chest.cs" />
+    <Compile Include="Items\Gloves.cs" />
+    <Compile Include="Items\Helmet.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Character\BasicCharacter.cs" />
+    <Compile Include="Character\ICharacterInventory.cs" />
+    <Compile Include="Items\BasicItem.cs" />
+    <Compile Include="Character\IHuman.cs" />
+    <Compile Include="General\IIdentifiable.cs" />
+    <Compile Include="NPC\INPC.cs" />
+    <Compile Include="Items\IPotion.cs" />
+    <Compile Include="Skills\BasicSkill.cs" />
+    <Compile Include="General\ISellable.cs" />
+    <Compile Include="NPC\ItemsDrop.cs" />
+    <Compile Include="Items\LeggingsArmor.cs" />
+    <Compile Include="TheGame\Map.cs" />
+    <Compile Include="TheGame\MapObject.cs" />
+    <Compile Include="TheGame\MapObjectType.cs" />
+    <Compile Include="Items\Necklace.cs" />
+    <Compile Include="NPC\NPC.cs" />
+    <Compile Include="Items\Potion.cs" />
+    <Compile Include="Skills\ISkill.cs" />
+    <Compile Include="Skills\Skill.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ring.cs" />
-    <Compile Include="TheGame.cs" />
-    <Compile Include="Weapon.cs" />
+    <Compile Include="Items\Ring.cs" />
+    <Compile Include="TheGame\TheGame.cs" />
+    <Compile Include="Items\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
