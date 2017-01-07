@@ -8,7 +8,6 @@ namespace StrawberryAdventure
         private static object syncRoot = new Object();
         private Map[] _maps;
 
-
         // ???
         private TheGame() {}
 
