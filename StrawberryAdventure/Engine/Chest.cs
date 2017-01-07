@@ -8,7 +8,7 @@ namespace StrawberryAdventure
         private int _id;
         private int _level;
         private ItemQuality _quality;
-        List<BasicItem> _items;
+        private List<BasicItem> _items;
 
         public Chest(int level, ItemQuality quality, List<BasicItem> items)
         {
