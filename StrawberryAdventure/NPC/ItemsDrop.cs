@@ -2,15 +2,24 @@
 {
     public class ItemsDrop
     {
+        BasicItem _item;
+        int _probability;
+
+        public ItemsDrop(BasicItem item, int probability)
+        {
+            Item = item;
+            Probability = probability;
+        }
         public BasicItem Item
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _item;
             }
 
-            set
+            private set
             {
+                _item = value;
             }
         }
 
@@ -18,12 +27,18 @@
         {
             get
             {
-                throw new System.NotImplementedException();
+                return _probability;
             }
 
-            set
+            private set
             {
+                _probability = value;
             }
+        }
+
+        public bool Dropped()
+        {
+            return Rnd.Random(100) < Probability;
         }
     }
 }

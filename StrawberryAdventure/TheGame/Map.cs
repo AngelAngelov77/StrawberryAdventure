@@ -23,7 +23,7 @@ namespace StrawberryAdventure
             this.Width = width;
             this.Height = height;
             this.GenerateLayout(obstruclesCount, monstersCount, chestsCount);
-            this._strawberryHero = new Character(heroName);
+            this._strawberryHero = new Character();
         }
 
         public int Width

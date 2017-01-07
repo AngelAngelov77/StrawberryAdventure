@@ -27,35 +27,19 @@ ToDo - Implementation of Chests, Potions(immediate and time (will not be impleme
 Optionally - to create method for visualisation of the map on Console
 
 Skills to be done:
-
 Weapon mastery - increases attack.
-
 Armor mastery - increases defense.
-
 Battle proficiency - increases accuracy.
-
 Agility - increases evasion.
-
 Iron body - increases HP (for increasing level with one - increasing HP with 5 or 10)
-
 Theft mastery - increases chest unlock chance
 
-
 To be done - experience needed to level up
-
-level 1 - 0 - 999 exp points(EP).
-
+level 1 - 0 - 999 exp points(EP). 
 level 2 - 1000 - 1999 EP. (+1000 EP to lvl up)
-
 level 3 - 2000 - 3499 EP. (+1000 EP tp lvl up)
-
 level 4 - 3500 - 5499 EP. (+1500 EP to lvl up)
-
 http://classic.battle.net/diablo2exp/basics/levels.shtml - Diablo 2 model
-
 https://us.battle.net/forums/en/d3/topic/12163276448 - Diablo 3 model
-
 http://www.heroesofmightandmagic.com/heroes3/leveladv.shtml - Heroes 3 model
-
 Implementation: array with int/long values, private method in Character class invoked after winning a battle to check if conditions for leveling up are met.
-

@@ -42,6 +42,6 @@
         Backpack5,
         Backpack6,
         Backpack7,
-        Backpack8
+        Count
     }
 }

@@ -9,9 +9,13 @@ namespace StrawberryAdventure
     {
         private static volatile TheGame instance;
         private static object syncRoot = new Object();
+        private static LevelingModel _levelingModel = new LevelingModel();
         Map[] _maps;
 
-        private TheGame() {}
+        private TheGame()
+        {
+            //ToDo : generate maps, create hero
+        }
 
         //Singelton
         public static TheGame GetInstance
@@ -52,5 +56,7 @@ namespace StrawberryAdventure
         {
             throw new System.NotImplementedException();
         }
+
+        //ToDo Create EventHandler for KeyPressed
     }
 }

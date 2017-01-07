@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character\ICharacter.cs" />
+    <Compile Include="Character\Inventory.cs" />
     <Compile Include="General\Idetifiable.cs" />
+    <Compile Include="General\LevelingModel.cs" />
+    <Compile Include="General\Random.cs" />
     <Compile Include="Items\BodyArmor.cs" />
     <Compile Include="Character\BodyPositions.cs" />
     <Compile Include="Items\Boots.cs" />
@@ -55,7 +58,7 @@
     <Compile Include="Items\Helmet.cs" />
     <Compile Include="Character\Character.cs" />
     <Compile Include="Character\BasicCharacter.cs" />
-    <Compile Include="Character\ICharacterInventory.cs" />
+    <Compile Include="Character\IInventory.cs" />
     <Compile Include="Items\BasicItem.cs" />
     <Compile Include="Character\IHuman.cs" />
     <Compile Include="General\IIdentifiable.cs" />
