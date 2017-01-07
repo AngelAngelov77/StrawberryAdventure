@@ -35,7 +35,7 @@ namespace StrawberryAdventure
             _experience = experience;
             _itemsDrop = itemsDrop;
             Level = level;
-            _id = Idetifiable.GetID();
+            _id = Identifiable.GetID();
         }
 
  

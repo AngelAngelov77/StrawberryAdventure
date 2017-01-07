@@ -7,14 +7,12 @@ namespace StrawberryAdventure
     {
         private int _id;
         private int _level;
-        private ItemQuality _quality;
         List<BasicItem> _items;
 
-        public Chest(int level, ItemQuality quality, List<BasicItem> items)
+        public Chest(int level, List<BasicItem> items)
         {
-            _id = Idetifiable.GetID();
+            _id = Identifiable.GetID();
             _level = level;
-            _quality = quality;
             if (items != null)
             {
                 _items = items;
@@ -28,14 +26,6 @@ namespace StrawberryAdventure
         public void AddItem(BasicItem item)
         {
             _items.Add(item);
-        }
-
-        public ItemQuality Quality
-        {
-            get
-            {
-                return _quality;
-            }
         }
         
         public int Level

@@ -4,10 +4,10 @@
     {
         BasicItem[] Items { get; }
 
-        BasicItem GetItem(Potion position);
+        BasicItem GetItem(ItemPositions position);
         void EquipItem(BasicItem item);
         void EquipItem(BasicItem item, bool removeAlreadyEquippedItem);
-        void Unequip(Potion position);
+        void Unequip(ItemPositions  position);
         void RemoveItem(BasicItem item, BodyPositions position = BodyPositions.Backpack);
     }
 }

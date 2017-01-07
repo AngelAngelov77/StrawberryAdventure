@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
-    public abstract class BasicCharacter : ICharacter
+    public abstract class BasicCharacter : ICharacter, IIdentifiable
     {
+        private int _id;
         private const int _skillPointsPerLevel = 5;
         public int BasicHitPoints { get; protected set; }
         public int BasicAttack { get; protected set; }
@@ -12,8 +12,6 @@ namespace StrawberryAdventure
         public int BasicAccuracy { get; protected set; }
         public int BasicEvasion { get; protected set; }
         public int BasicCriticalRate { get; protected set; }
-        public int BasicMinimalDamage { get; protected set; }
-        public int BasicMaximalDamage { get; protected set; }
         public int Level { get; protected set; }
         public IInventory MyInventory { get; protected set; }
         public int SkillPoints { get; protected set; }
@@ -32,7 +30,10 @@ namespace StrawberryAdventure
                 }
                 foreach (var item in MyInventory.Items)
                 {
-                    result += item.BonusAttack;
+                    if (item.BodyPosition != BodyPositions.Backpack)
+                    {
+                        result += item.BonusAttack;
+                    }
                 }
                 return result;
             }
@@ -42,7 +43,19 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                int result = BasicDefense;
+                foreach (var skill in Skills)
+                {
+                    result += skill.DefenseBonus;
+                }
+                foreach (var item in MyInventory.Items)
+                {
+                    if (item.BodyPosition != BodyPositions.Backpack)
+                    {
+                        result += item.BonusDefense;
+                    }
+                }
+                return result;
             }
         }
 
@@ -50,7 +63,19 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                int result = BasicAccuracy;
+                foreach (var skill in Skills)
+                {
+                    result += skill.AccuracyBonus;
+                }
+                foreach (var item in MyInventory.Items)
+                {
+                    if (item.BodyPosition != BodyPositions.Backpack)
+                    {
+                        result += item.BonusAccuracy;
+                    }
+                }
+                return result;
             }
         }
 
@@ -58,7 +83,19 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                int result = BasicHitPoints;
+                foreach (var skill in Skills)
+                {
+                    result += skill.HitPointsBonus;
+                }
+                foreach (var item in MyInventory.Items)
+                {
+                    if (item.BodyPosition != BodyPositions.Backpack)
+                    {
+                        result += item.BonusHitPoints;
+                    }
+                }
+                return result;
             }
         }
 
@@ -66,7 +103,19 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                int result = BasicEvasion;
+                foreach (var skill in Skills)
+                {
+                    result += skill.EvasionBonus;
+                }
+                foreach (var item in MyInventory.Items)
+                {
+                    if (item.BodyPosition != BodyPositions.Backpack)
+                    {
+                        result += item.BonusEvasion;
+                    }
+                }
+                return result;
             }
         }
 
@@ -74,7 +123,16 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                int result = 0;
+                foreach (var skill in Skills)
+                {
+                    if (skill.ChestUnlockLevel > 0 )
+                    {
+                        result = skill.ChestUnlockLevel;
+                        break;
+                    };
+                }
+                return result;
             }
         }
 
@@ -82,7 +140,7 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new NotImplementedException();
+                return _id;
             }
         }
 

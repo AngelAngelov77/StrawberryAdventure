@@ -29,7 +29,7 @@ namespace StrawberryAdventure
             throw new NotImplementedException();
         }
 
-        public BasicItem GetItem(Potion position)
+        public BasicItem GetItem(ItemPositions position)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +39,7 @@ namespace StrawberryAdventure
             throw new NotImplementedException();
         }
 
-        public void Unequip(Potion position)
+        public void Unequip(ItemPositions position)
         {
             throw new NotImplementedException();
         }

@@ -78,7 +78,7 @@ namespace StrawberryAdventure
             EvasionBonusPerLevel = evasionBonusPerLevel;
             ChestUnlockLevelPerLevel = chestUnlockLevelPerLevel;
 
-            _id = Idetifiable.GetID();
+            _id = Identifiable.GetID();
 
         }
 
