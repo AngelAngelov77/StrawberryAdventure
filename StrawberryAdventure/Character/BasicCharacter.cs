@@ -5,21 +5,34 @@ namespace StrawberryAdventure
 {
     public abstract class BasicCharacter : ICharacter
     {
-        private const int _skillPointsPerLevel = 5;
+        private const int SkillPointsPerLevel = 5;
+
         public int BasicHitPoints { get; private set; }
+
         public int BasicAttack { get; protected set; }
+
         public int BasicDefense { get; protected set; }
+
         public int BasicAccuracy { get; protected set; }
+
         public int BasicEvasion { get; protected set; }
+
         public int BasicShieldDefenseRate { get; protected set; }
+
         public int BasicCriticalRate { get; protected set; }
+
         public int BasicMinimalDamage { get; protected set; }
+
         public int BasicMaximalDamage { get; protected set; }
+
         public int Level { get; protected set; }
+
         public ICharacterInventory Inventory { get; protected set; }
+
         public int SkillPoints { get; protected set; }
 
         public string Name { get; protected set; }
+
         public List<BasicSkill> Skills { get; protected set; }
 
         public int Attack
@@ -80,7 +93,7 @@ namespace StrawberryAdventure
 
         public void LevelUp()
         {
-            SkillPoints += _skillPointsPerLevel;
+            SkillPoints += SkillPointsPerLevel;
         }
     }
 }

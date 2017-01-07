@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrawberryAdventure
 {
-    class Startup
+    public class Startup
     {
-        static void Main()
+        public static void Main()
         {
+            // TODO: Start game engine
+
             TheGame StrawberryAdventute = TheGame.GetInstance;
 
             Skill test = new Skill("Kroshe", level: 7, attackBonusBasic: 10, attackBonusPerLevel: 2);

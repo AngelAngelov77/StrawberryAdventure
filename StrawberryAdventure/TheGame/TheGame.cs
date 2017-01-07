@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace StrawberryAdventure
 {
@@ -9,8 +6,10 @@ namespace StrawberryAdventure
     {
         private static volatile TheGame instance;
         private static object syncRoot = new Object();
-        Map[] _maps;
+        private Map[] _maps;
 
+
+        // ???
         private TheGame() {}
 
         //Singelton
