@@ -1,17 +1,30 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
     public class Map
     {
-        private StrawberryAdventure.MapObject[] _layout;
+        private StrawberryAdventure.MapObject[,] _layout;
         private int _width;
         private int _height;
         private List<NPC> _monsters;
         private List<BasicItem> _items;
         private Character _strawberryHero;
         private string[] _itemPrefix = { "Wood", "Stone", "Iron", "Steel", "Mithril" };
+
+        public Map(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        public Map(MapObject[,] layout)
+        {
+            Width = layout.GetLength(0);
+            Height = layout.GetLength(1);
+            _layout = layout;
+        }
 
         public Map(int width,
                    int height,
@@ -35,7 +48,7 @@ namespace StrawberryAdventure
 
             private set
             {
-                if (value > 20)
+                if (value >= 20)
                 {
                     _width = value;
                 }
@@ -55,7 +68,7 @@ namespace StrawberryAdventure
 
             private set
             {
-                if (value > 20)
+                if (value >= 20)
                 {
                     _height = value;
                 }
@@ -66,7 +79,7 @@ namespace StrawberryAdventure
             }
         }
 
-        public MapObject[] Layout
+        public MapObject[,] Layout
         {
             get
             {
@@ -74,6 +87,13 @@ namespace StrawberryAdventure
             }
         }
 
+        public void SetLayout(MapObject[,] layout)
+        {
+            if (layout.GetLength(0) == Width && layout.GetLength(1) == Height)
+            {
+                _layout = layout;
+            }
+        }
 
         public NPC[] Monsters
         {
