@@ -10,7 +10,7 @@
             Item = item;
             Probability = probability;
         }
-
+        
         public BasicItem Item
         {
             get
