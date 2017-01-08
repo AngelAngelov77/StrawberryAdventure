@@ -1,15 +1,12 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
     public class NPC : BasicCharacter, INPC, IIdentifiable
     {
-        private BodyPositions _bodyPositions;
         private int _id;
-        private ItemsDrop[] _itemsDrop;
+        private List<ItemsDrop> _itemsDrop;
         private int _experience;
-        private string _name;
-        private int _level;
 
         public NPC(string name,
                    int hitPoint,
@@ -17,11 +14,9 @@ namespace StrawberryAdventure
                    int defense,
                    int accuracy,
                    int evasion,
-                   int criticalRate,
                    IInventory NPCInventory,
                    int experience,
-                   ItemsDrop[] itemsDrop,
-                   BodyPositions bodyPositions,
+                   List<ItemsDrop> itemsDrop,
                    int level)
         {
             Name = name;
@@ -30,7 +25,6 @@ namespace StrawberryAdventure
             BasicDefense = defense;
             BasicAccuracy = accuracy;
             BasicEvasion = evasion;
-            BasicCriticalRate = criticalRate;
             MyInventory = NPCInventory;
             _experience = experience;
             _itemsDrop = itemsDrop;
@@ -47,7 +41,7 @@ namespace StrawberryAdventure
             }
         }
 
-        public ItemsDrop[] DroppingItems
+        public List<ItemsDrop> DroppingItems
         {
             get
             {
@@ -55,12 +49,17 @@ namespace StrawberryAdventure
             }
         }
 
-        public BodyPositions BodyPositions
+        public List<BasicItem> ItemsDropped()
         {
-            get
+            List<BasicItem> result = new List<BasicItem>();
+            foreach (var item in DroppingItems)
             {
-                return _bodyPositions;
+                if (item.Dropped())
+                {
+                    result.Add(item.Item);
+                }
             }
+            return result;
         }
     }
 }
