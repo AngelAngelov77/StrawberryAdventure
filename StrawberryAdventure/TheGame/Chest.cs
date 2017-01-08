@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace StrawberryAdventure
@@ -7,12 +7,14 @@ namespace StrawberryAdventure
     {
         private int _id;
         private int _level;
-        List<BasicItem> _items;
+        private bool _locked;
+        private List<BasicItem> _items;
 
-        public Chest(int level, List<BasicItem> items)
+        public Chest(int level, bool locked, List<BasicItem> items)
         {
             _id = Identifiable.GetID();
             _level = level;
+            _locked = locked;
             if (items != null)
             {
                 _items = items;
@@ -57,11 +59,7 @@ namespace StrawberryAdventure
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
+                return _locked;
             }
         }
 
@@ -71,6 +69,23 @@ namespace StrawberryAdventure
             {
                 return _id;
             }
+        }
+
+        public bool Unlock(Character character)
+        {
+            if (character.ChestUnlockSkill < Level)
+            {
+                return (Rnd.Random(100) < ChestUnlockChance(Level - character.ChestUnlockSkill));
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private int ChestUnlockChance(int levelDifference)
+        {
+            return 50 / (levelDifference * levelDifference);
         }
     }
 }
