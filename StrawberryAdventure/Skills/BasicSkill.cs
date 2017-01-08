@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace StrawberryAdventure
 {
@@ -10,14 +9,14 @@ namespace StrawberryAdventure
         public string Description { get { return ToString(); } }
         public int Level { get; private set; }
 
-        public int ExperienceModifier { get { return ExperienceModifierBasic + (Level * ExperienceModifierPerLevel); } }
-        public int AttackBonus { get { return AttackBonusBasic + (Level * AttackBonusPerLevel); } }
-        public int DefenseBonus { get { return DefenseBonusBasic + (Level * DefenseBonusPerLevel); } }
-        public int AccuracyBonus { get { return AccuracyBonusBasic + (Level * AccuracyBonusPerLevel); } }
-        public int CriticalRateBonus { get { return CriticalRateBonusBasic + (Level * CriticalRateBonusPerLevel); } }
-        public int HitPointsBonus { get { return HitPointsBonusBasic + (Level * HitPointsBonusPerLevel); } }
-        public int EvasionBonus { get { return EvasionBonusBasic + (Level * EvasionBonusPerLevel); } }
-        public int ChestUnlockLevel { get { return ChestUnlockLevelBasic + (Level * ChestUnlockLevelPerLevel); } }
+        public int ExperienceModifier { get { return Level > 0 ? ExperienceModifierBasic + (Level * ExperienceModifierPerLevel) : 0; } }
+        public int AttackBonus { get { return Level > 0 ? AttackBonusBasic + (Level * AttackBonusPerLevel) : 0; } }
+        public int DefenseBonus { get { return Level > 0 ? DefenseBonusBasic + (Level * DefenseBonusPerLevel) : 0; } }
+        public int AccuracyBonus { get { return Level > 0 ? AccuracyBonusBasic + (Level * AccuracyBonusPerLevel) : 0; } }
+        public int CriticalRateBonus { get { return Level > 0 ? + (Level * CriticalRateBonusPerLevel) : 0; } }
+        public int HitPointsBonus { get { return Level > 0 ? HitPointsBonusBasic + (Level * HitPointsBonusPerLevel) : 0; } }
+        public int EvasionBonus { get { return Level > 0 ? EvasionBonusBasic + (Level * EvasionBonusPerLevel) : 0; } }
+        public int ChestUnlockLevel { get { return Level > 0 ? ChestUnlockLevelBasic + (Level * ChestUnlockLevelPerLevel) : 0; } }
 
         public int ExperienceModifierBasic { get; private set; }
         public int AttackBonusBasic { get; private set; }
