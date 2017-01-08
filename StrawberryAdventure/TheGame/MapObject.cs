@@ -1,10 +1,10 @@
-﻿namespace StrawberryAdventure
+namespace StrawberryAdventure
 {
     public struct MapObject
     {
 
-        public int Type;
+        public MapObjectType Type;
 
-        public int Reference;
+        public object Object;
     }
 }
