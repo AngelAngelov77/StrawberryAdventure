@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
@@ -8,7 +7,7 @@ namespace StrawberryAdventure
         private int _experience;
 
         public Character(string name, int hitPoints, int basicAttack, int basicDefense, int basicAccuracy, int basicEvasion,
-                              int basicCriticalRate, int skillPoints = 0, List<BasicSkill> skills = null)
+                         int skillPoints = 0, List<BasicSkill> skills = null)
         {
             Name = name;
             BasicHitPoints = hitPoints;
@@ -16,9 +15,14 @@ namespace StrawberryAdventure
             BasicDefense = basicDefense;
             BasicAccuracy = basicAccuracy;
             BasicEvasion = basicEvasion;
-            BasicCriticalRate = basicCriticalRate;
             SkillPoints = skillPoints;
-            InitSkills(skills);
+            Skills = skills;
+        }
+
+        public Character(Character character) : this(character.Name, character.HitPoints, character.BasicAttack, character.BasicDefense, 
+                                                     character.BasicAccuracy, character.BasicEvasion,
+                                                     character.SkillPoints, character.Skills)
+        {
         }
 
         public int Experience
@@ -37,9 +41,11 @@ namespace StrawberryAdventure
             }
         }
 
-        private void InitSkills(List<BasicSkill> skills)
+        public bool AddExperience(int experienceGained, LevelingModel levelingModel)
         {
-
+            bool result;
+            _experience = levelingModel.AddExperience(Experience, experienceGained, out result);
+            return result;
         }
     }
 }
