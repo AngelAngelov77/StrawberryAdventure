@@ -8,6 +8,6 @@
         void EquipItem(BasicItem item);
         void EquipItem(BasicItem item, bool removeAlreadyEquippedItem);
         void Unequip(ItemPositions  position);
-        void RemoveItem(BasicItem item, BodyPositions position = BodyPositions.Backpack);
+        void RemoveItem(ItemPositions position);
     }
 }

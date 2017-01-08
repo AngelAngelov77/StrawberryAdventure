@@ -13,7 +13,6 @@ namespace StrawberryAdventure
         public int AttackBonus { get { return Level > 0 ? AttackBonusBasic + (Level * AttackBonusPerLevel) : 0; } }
         public int DefenseBonus { get { return Level > 0 ? DefenseBonusBasic + (Level * DefenseBonusPerLevel) : 0; } }
         public int AccuracyBonus { get { return Level > 0 ? AccuracyBonusBasic + (Level * AccuracyBonusPerLevel) : 0; } }
-        public int CriticalRateBonus { get { return Level > 0 ? + (Level * CriticalRateBonusPerLevel) : 0; } }
         public int HitPointsBonus { get { return Level > 0 ? HitPointsBonusBasic + (Level * HitPointsBonusPerLevel) : 0; } }
         public int EvasionBonus { get { return Level > 0 ? EvasionBonusBasic + (Level * EvasionBonusPerLevel) : 0; } }
         public int ChestUnlockLevel { get { return Level > 0 ? ChestUnlockLevelBasic + (Level * ChestUnlockLevelPerLevel) : 0; } }
@@ -22,7 +21,6 @@ namespace StrawberryAdventure
         public int AttackBonusBasic { get; private set; }
         public int DefenseBonusBasic { get; private set; }
         public int AccuracyBonusBasic { get; private set; }
-        public int CriticalRateBonusBasic { get; private set; }
         public int HitPointsBonusBasic { get; private set; }
         public int EvasionBonusBasic { get; private set; }
         public int ChestUnlockLevelBasic { get; private set; }
@@ -31,7 +29,6 @@ namespace StrawberryAdventure
         public int AttackBonusPerLevel { get; private set; }
         public int DefenseBonusPerLevel { get; private set; }
         public int AccuracyBonusPerLevel { get; private set; }
-        public int CriticalRateBonusPerLevel { get; private set; }
         public int HitPointsBonusPerLevel { get; private set; }
         public int EvasionBonusPerLevel { get; private set; }
 
@@ -51,7 +48,6 @@ namespace StrawberryAdventure
                             int attackBonusBasic = 0,               int attackBonusPerLevel = 0,
                             int defenseBonusBasic = 0,              int defenseBonusPerLevel = 0,
                             int accuracyBonusBasic = 0,             int accuracyBonusPerLevel = 0,
-                            int criticalRateBonusBasic = 0,         int criticalRateBonusPerLevel = 0,
                             int hitPointsBonusBasic = 0,            int hitPointsBonusPerLevel = 0,
                             int evasionBonusBasic = 0,              int evasionBonusPerLevel = 0,
                             int chestUnlockLevelBasic = 0,          int chestUnlockLevelPerLevel = 0)
@@ -63,7 +59,6 @@ namespace StrawberryAdventure
             AttackBonusBasic = attackBonusBasic;
             DefenseBonusBasic = defenseBonusBasic;
             AccuracyBonusBasic = accuracyBonusBasic;
-            CriticalRateBonusBasic = criticalRateBonusBasic;
             HitPointsBonusBasic = hitPointsBonusBasic;
             EvasionBonusBasic = evasionBonusBasic;
             ChestUnlockLevelBasic = chestUnlockLevelBasic;
@@ -72,7 +67,6 @@ namespace StrawberryAdventure
             AttackBonusPerLevel = attackBonusPerLevel;
             DefenseBonusPerLevel = defenseBonusPerLevel;
             AccuracyBonusPerLevel = accuracyBonusPerLevel;
-            CriticalRateBonusPerLevel = criticalRateBonusPerLevel;
             HitPointsBonusPerLevel = hitPointsBonusPerLevel;
             EvasionBonusPerLevel = evasionBonusPerLevel;
             ChestUnlockLevelPerLevel = chestUnlockLevelPerLevel;

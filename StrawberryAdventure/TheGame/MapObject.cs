@@ -1,4 +1,4 @@
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
     public struct MapObject
     {

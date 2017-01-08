@@ -11,7 +11,6 @@ namespace StrawberryAdventure
         public int BasicDefense { get; protected set; }
         public int BasicAccuracy { get; protected set; }
         public int BasicEvasion { get; protected set; }
-        public int BasicCriticalRate { get; protected set; }
         public int Level { get; protected set; }
         public IInventory MyInventory { get; protected set; }
         public int SkillPoints { get; protected set; }
