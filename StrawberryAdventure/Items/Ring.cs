@@ -6,7 +6,7 @@
                     int hitPoints,
                     int accuracy,
                     int evasion,
-                    int experience) : base(name, BodyPositions.Rings,
+                    int experience) : base(name, BodyPositions.Fingers,
                                            ItemType.Jewel,
                                            bonusHitPoints: hitPoints,
                                            bonusAccuracy: accuracy,
