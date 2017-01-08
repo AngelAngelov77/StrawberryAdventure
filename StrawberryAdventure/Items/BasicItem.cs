@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace StrawberryAdventure
 {
@@ -15,7 +14,6 @@ namespace StrawberryAdventure
         public int BonusEvasion { get; private set; }
         public ItemType Type { get; private set; }
         public string Name { get; private set; }
-        //public int SubType { get; private set; }
         public int ExperienceModifier { get; private set; }
 
         public int ID
