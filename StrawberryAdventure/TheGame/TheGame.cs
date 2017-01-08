@@ -10,7 +10,7 @@ namespace StrawberryAdventure
         private static volatile TheGame instance;
         private static object syncRoot = new Object();
         private static LevelingModel _levelingModel = new LevelingModel();
-        Map[] _maps;
+        List<Map> _maps;
 
         private TheGame()
         {
@@ -35,7 +35,7 @@ namespace StrawberryAdventure
             }
         }
 
-        public Map[] Maps
+        public List<Map> Maps
         {
             get
             {
@@ -52,11 +52,67 @@ namespace StrawberryAdventure
 
         }
 
-        private static void DamageCalculator()
+        public void AddMap(Map map)
         {
-            throw new System.NotImplementedException();
+            Maps.Add(map);
         }
 
-        //ToDo Create EventHandler for KeyPressed
+        
+
+        private bool Battle(Character hero, NPC npc)
+        {
+            Console.WriteLine($"Hero {hero.Name} started battle with {npc.Name}.");
+            int heroHP = hero.HitPoints;
+            int npcHP = npc.HitPoints;
+            while (true)
+            {
+                int damage = DamageCalculator(hero, npc); //hero deals damage to npc
+                Console.Write($"{hero.Name} dealed {damage} damage to {npc.Name}. ");
+                npcHP -= damage;
+                if (npcHP > 0)
+                {
+                    Console.WriteLine($"{npc.Name} hit points are {npcHP}.");
+                }
+                else
+                {
+                    Console.WriteLine($"{hero.Name} defeats {npc.Name}");
+                    return true;
+                }
+                damage = DamageCalculator(npc, hero); //npc deals damage to hero
+                Console.Write($"{npc.Name} dealed {damage} damage to {hero.Name}. ");
+                heroHP -= damage;
+                if (heroHP > 0)
+                {
+                    Console.WriteLine($"{hero.Name} hit points are {npcHP}.");
+                }
+                else
+                {
+                    Console.WriteLine($"{hero.Name} has been defeated.");
+                    return false;
+                }
+            }
+        }
+
+        private static int DamageCalculator(BasicCharacter attacker, BasicCharacter defender)
+        {
+            int damage = 0;
+            if (Rnd.Random(attacker.Accuracy) > Rnd.Random(defender.Evasion)) //Check successful hit
+            {
+                int damageIndex = attacker.Attack - defender.Defense;
+                damage = Rnd.Random(7 * damageIndex);
+                bool critical = Rnd.Random(100) < 15;
+                if (critical)
+                {
+                    damage = 2 * damage;
+                }
+            }
+
+            return damage;
+        }
+
+        public void HandleInput(char key)
+        {
+            Console.WriteLine(key);
+        }
     }
 }
