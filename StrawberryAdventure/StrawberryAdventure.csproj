@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Character\ICharacter.cs" />
     <Compile Include="Character\Inventory.cs" />
+    <Compile Include="General\GameInterface.cs" />
     <Compile Include="General\Identifiable.cs" />
     <Compile Include="General\LevelingModel.cs" />
     <Compile Include="General\Random.cs" />

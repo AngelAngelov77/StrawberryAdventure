@@ -74,7 +74,7 @@ namespace StrawberryAdventure
             {
                 keyinfo = Console.ReadKey();
                 //ToDo - handle arrows, w, a, s, d - moving the hero, h - show hero menu, m - show map (optional)
-                StrawberryAdventute.HandleInput(keyinfo.KeyChar);
+                StrawberryAdventute.HandleInput(keyinfo);
             }
             while (keyinfo.Key != ConsoleKey.Escape);
         }

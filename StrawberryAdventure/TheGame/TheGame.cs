@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace StrawberryAdventure
 {
@@ -61,33 +59,25 @@ namespace StrawberryAdventure
 
         private bool Battle(Character hero, NPC npc)
         {
-            Console.WriteLine($"Hero {hero.Name} started battle with {npc.Name}.");
+            GameInterface.Action(GameAction.BattleStarted, hero, npc);
             int heroHP = hero.HitPoints;
             int npcHP = npc.HitPoints;
             while (true)
             {
                 int damage = DamageCalculator(hero, npc); //hero deals damage to npc
-                Console.Write($"{hero.Name} dealed {damage} damage to {npc.Name}. ");
+                GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
                 npcHP -= damage;
-                if (npcHP > 0)
+                if (npcHP <= 0)
                 {
-                    Console.WriteLine($"{npc.Name} hit points are {npcHP}.");
-                }
-                else
-                {
-                    Console.WriteLine($"{hero.Name} defeats {npc.Name}");
+                    GameInterface.Action(GameAction.BattleWon, hero, npc);
                     return true;
                 }
                 damage = DamageCalculator(npc, hero); //npc deals damage to hero
-                Console.Write($"{npc.Name} dealed {damage} damage to {hero.Name}. ");
+                GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
                 heroHP -= damage;
-                if (heroHP > 0)
+                if (heroHP <= 0)
                 {
-                    Console.WriteLine($"{hero.Name} hit points are {npcHP}.");
-                }
-                else
-                {
-                    Console.WriteLine($"{hero.Name} has been defeated.");
+                    GameInterface.Action(GameAction.BattleLost, hero);
                     return false;
                 }
             }
@@ -110,9 +100,39 @@ namespace StrawberryAdventure
             return damage;
         }
 
-        public void HandleInput(char key)
+        public void HandleInput(ConsoleKeyInfo key)
         {
-            Console.WriteLine(key);
+            switch (key.Key)
+            {
+                case ConsoleKey.LeftArrow:
+                case ConsoleKey.A:
+                    //To Do - try move left
+                    break;
+                case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
+                    //To Do - try move up
+                    break;
+                case ConsoleKey.RightArrow:
+                case ConsoleKey.D:
+                    //To Do - try move right
+                    break;
+                case ConsoleKey.DownArrow:
+                case ConsoleKey.S:
+                    //To Do - try move down
+                    break;
+                case ConsoleKey.I:
+                    //ToDo - show inventory inteface
+                    break;
+                case ConsoleKey.H:
+                    //ToDo - show hero skills interface
+                    break;
+                case ConsoleKey.M:
+                    //ToDo - show map
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine(key.KeyChar);
         }
     }
 }
