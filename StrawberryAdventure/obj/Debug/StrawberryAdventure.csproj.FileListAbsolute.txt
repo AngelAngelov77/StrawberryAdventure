@@ -1,7 +1,0 @@
-F:\Telerik\C#\OOP1\StrawberryAdventure\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.exe.config
-D:\Repos\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.exe.config
-D:\Repos\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.csprojResolveAssemblyReference.cache
-D:\Repos\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.exe
-D:\Repos\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.pdb
-D:\Repos\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.exe
-D:\Repos\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.pdb
