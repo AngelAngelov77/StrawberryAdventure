@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,42 +58,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyArmor.cs" />
-    <Compile Include="BodyPositions.cs" />
-    <Compile Include="Boots.cs" />
-    <Compile Include="CharacterItemQuality.cs" />
-    <Compile Include="CharacterItemType.cs" />
-    <Compile Include="Chest.cs" />
-    <Compile Include="FullArmor.cs" />
-    <Compile Include="Gloves.cs" />
-    <Compile Include="Helmet.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="ICharacter.cs" />
-    <Compile Include="ICharacterInventory.cs" />
-    <Compile Include="BasicItem.cs" />
-    <Compile Include="IHuman.cs" />
-    <Compile Include="INPC.cs" />
-    <Compile Include="IPotion.cs" />
-    <Compile Include="BasicSkills.cs" />
-    <Compile Include="ItemsDrop.cs" />
-    <Compile Include="LeggingsArmor.cs" />
-    <Compile Include="Map.cs" />
-    <Compile Include="MapDificulty.cs" />
-    <Compile Include="MapObject.cs" />
-    <Compile Include="MapObjectType.cs" />
-    <Compile Include="Neckle.cs" />
-    <Compile Include="NPC.cs" />
-    <Compile Include="Potion.cs" />
-    <Compile Include="Skill.cs" />
+    <Compile Include="Character\ICharacter.cs" />
+    <Compile Include="Character\Inventory.cs" />
+    <Compile Include="General\GameInterface.cs" />
+    <Compile Include="General\Identifiable.cs" />
+    <Compile Include="General\LevelingModel.cs" />
+    <Compile Include="General\Random.cs" />
+    <Compile Include="Items\BodyArmor.cs" />
+    <Compile Include="Character\BodyPositions.cs" />
+    <Compile Include="Items\Boots.cs" />
+    <Compile Include="General\CharacterItemType.cs" />
+    <Compile Include="TheGame\Chest.cs" />
+    <Compile Include="Items\Gloves.cs" />
+    <Compile Include="Items\Helmet.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Character\BasicCharacter.cs" />
+    <Compile Include="Character\IInventory.cs" />
+    <Compile Include="Items\BasicItem.cs" />
+    <Compile Include="Character\IHuman.cs" />
+    <Compile Include="General\IIdentifiable.cs" />
+    <Compile Include="NPC\INPC.cs" />
+    <Compile Include="Skills\BasicSkill.cs" />
+    <Compile Include="NPC\ItemsDrop.cs" />
+    <Compile Include="Items\LeggingsArmor.cs" />
+    <Compile Include="TheGame\Map.cs" />
+    <Compile Include="TheGame\MapObject.cs" />
+    <Compile Include="TheGame\MapObjectType.cs" />
+    <Compile Include="Items\Necklace.cs" />
+    <Compile Include="NPC\NPC.cs" />
+    <Compile Include="Skills\ISkill.cs" />
+    <Compile Include="Skills\Skill.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ring.cs" />
-    <Compile Include="TheGame.cs" />
-    <Compile Include="Weapon.cs" />
+    <Compile Include="Items\Ring.cs" />
+    <Compile Include="TheGame\TheGame.cs" />
+    <Compile Include="Items\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
