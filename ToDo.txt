@@ -1,6 +1,0 @@
-maps
-hero
-NPC
-visualization
-items
-link the classes together
