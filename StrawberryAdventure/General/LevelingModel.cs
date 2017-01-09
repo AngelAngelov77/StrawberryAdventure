@@ -5,7 +5,7 @@
         private int[] _experineceToLevel;
         private int _maxLevel;
 
-        public LevelingModel(int maxLevel= 50, int expForLevel1 = 1000, int percentageIncreasingExperience = 20)
+        public LevelingModel(int maxLevel = 50, int expForLevel1 = 1000, int percentageIncreasingExperience = 20)
         {
             _maxLevel = maxLevel;
             _experineceToLevel = new int[_maxLevel];

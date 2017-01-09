@@ -1,12 +1,12 @@
 ﻿namespace StrawberryAdventure
 {
-    class Identifiable
+    public class Identifiable
     {
-        private static int _id = 0;
+        private static int id = 0;
 
         public static int GetID()
         {
-            return _id++;
+            return id++;
         }
     }
 }

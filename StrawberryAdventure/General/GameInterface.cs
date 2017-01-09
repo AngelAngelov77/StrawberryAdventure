@@ -3,29 +3,6 @@ using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
-    public enum GameAction
-    {
-        Moving = 0,
-        ObstrackleHit,
-        ChestFound,
-        ChestUnlocked,
-        ChestResistedUnlock,
-        BattleStarted,
-        BattleHit,
-        BattleWon,
-        ExperienceGained,
-        BattleLost,
-        ItemsGathered
-    }
-
-    public enum GameInteraction
-    {
-        ChooseStartingHero = 0,
-        LevelUp,
-        HeroSkills,
-        HeroInventory
-    }
-
     public static class GameInterface
     {
         public static void Action(GameAction action, params object[] args)
@@ -56,22 +33,7 @@ namespace StrawberryAdventure
                         int x = (int)args[1];
                         int y = (int)args[2];
                         Chest chest = (Chest)args[3];
-                        string locked = chest.Locked ? "a locked" : "an unlocked";
-                        Console.WriteLine($"Hero {hero.Name} found {locked} chest at position ({x}, {y}).");
-                        break;
-                    }
-                case GameAction.ChestUnlocked:
-                    {
-                        BasicCharacter hero = (BasicCharacter)args[0];
-                        Chest chest = (Chest)args[1];
-                        Console.WriteLine($"Hero {hero.Name} successfully unlocked chest level {chest.Level}.");
-                        break;
-                    }
-                case GameAction.ChestResistedUnlock:
-                    {
-                        BasicCharacter hero = (BasicCharacter)args[0];
-                        Chest chest = (Chest)args[1];
-                        Console.WriteLine($"Hero {hero.Name} did'nt succeded to unlock chest level {chest.Level}.");
+                        Console.WriteLine($"Hero {hero.Name} found chest at position ({x}, {y}).");
                         break;
                     }
                 case GameAction.BattleStarted:
