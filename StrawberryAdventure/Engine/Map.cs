@@ -95,7 +95,7 @@ namespace StrawberryAdventure
             }
         }
 
-        public NPC[] Monsters
+        public INPC[] Monsters
         {
             get
             {

@@ -5,30 +5,30 @@ namespace StrawberryAdventure
 {
     public class Chest
     {
-        private List<BasicItem> _items;
+        private IList<BasicItem> items;
 
-        public Chest(List<BasicItem> items)
+        public Chest(List<BasicItem> itemsList)
         {
             if (items != null)
             {
-                _items = items;
+                items = itemsList;
             }
             else
             {
-                _items = new List<BasicItem>();
+                items = new List<BasicItem>();
             }
         }
         
         public void AddItem(BasicItem item)
         {
-            _items.Add(item);
+            items.Add(item);
         }
         
-        public List<BasicItem> Items
+        public IList<BasicItem> Items
         {
             get
             {
-                return _items;
+                return items;
             }
         }
     }

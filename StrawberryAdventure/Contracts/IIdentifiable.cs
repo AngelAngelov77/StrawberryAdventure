@@ -1,6 +1,6 @@
 ﻿namespace StrawberryAdventure
 {
-    interface IIdentifiable
+    public interface IIdentifiable
     {
         int ID { get; }
     }

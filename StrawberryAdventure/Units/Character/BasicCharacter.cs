@@ -1,13 +1,19 @@
-﻿namespace StrawberryAdventure
+﻿using System;
+
+namespace StrawberryAdventure
 {
-    using System;
     public abstract class BasicCharacter : ICharacter, IIdentifiable
     {
         private int _id;
+
         public int BasicHitPoints { get; protected set; }
+
         public int BasicAttack { get; protected set; }
+
         public int BasicDefense { get; protected set; }
+
         public int Level { get; protected set; }
+
         public string Name { get; protected set; }
 
 
@@ -43,8 +49,7 @@
 
         public void LevelUp()
         {
-            throw new System.Exception("Not implemented");
+            throw new NotImplementedException();
         }
-
     }
 }

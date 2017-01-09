@@ -2,11 +2,10 @@
 
 namespace StrawberryAdventure
 {
-
-    public static class Rnd
+    public static class RandomGenerator
     {
         static Random rnd;
-        static Rnd()
+        static RandomGenerator()
         {
             rnd = new Random();
         }

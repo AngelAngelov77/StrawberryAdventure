@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StrawberryAdventure
 {
-    class Startup
+    public class Startup
     {
-        static void Main()
+        public static void Main()
         {
-            TheGame StrawberryAdventute = TheGame.GetInstance;
+            Game StrawberryAdventute = Game.GetInstance;
 
             List<ItemsDrop> mravkaDrop = new List<ItemsDrop>();
             mravkaDrop.Add(new ItemsDrop(new Weapon("Mitika", 1), 80));
             mravkaDrop.Add(new ItemsDrop(new BodyArmor("Riznica", 10, 80), 40));
             mravkaDrop.Add(new ItemsDrop(new Necklace("Ogyrlica", 10), 5));
-            NPC mravka = new NPC("Fredi Mravkata", 10, 1, 1,mravkaDrop);
+            NPC mravka = new NPC("Fredi Mravkata", 10, 1, 1, mravkaDrop);
 
             List<BasicItem> chestItems = new List<BasicItem>();
             chestItems.Add(new Weapon("Yatagan", 10));
@@ -31,7 +28,7 @@ namespace StrawberryAdventure
                 layout[0, i] = new MapObject { Type = MapObjectType.Obstracle, Object = null };
                 layout[19, i] = new MapObject { Type = MapObjectType.Obstracle, Object = null };
                 layout[i, 0] = new MapObject { Type = MapObjectType.Obstracle, Object = null };
-                layout[i,19] = new MapObject { Type = MapObjectType.Obstracle, Object = null };
+                layout[i, 19] = new MapObject { Type = MapObjectType.Obstracle, Object = null };
             }
 
             layout[7, 9] = new MapObject { Type = MapObjectType.Chest, Object = chest };
@@ -39,7 +36,7 @@ namespace StrawberryAdventure
             Map testMap = new Map(20, 20);
             testMap.SetLayout(layout);
             Map testMap2 = new Map(layout);
-           
+
             Character hero = new Character("Yagodko", 60, 5, 5);
 
             ConsoleKeyInfo keyinfo;

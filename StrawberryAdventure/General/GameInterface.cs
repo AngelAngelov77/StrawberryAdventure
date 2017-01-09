@@ -3,29 +3,6 @@ using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
-    public enum GameAction
-    {
-        Moving = 0,
-        ObstrackleHit,
-        ChestFound,
-        ChestUnlocked,
-        ChestResistedUnlock,
-        BattleStarted,
-        BattleHit,
-        BattleWon,
-        ExperienceGained,
-        BattleLost,
-        ItemsGathered
-    }
-
-    public enum GameInteraction
-    {
-        ChooseStartingHero = 0,
-        LevelUp,
-        HeroSkills,
-        HeroInventory
-    }
-
     public static class GameInterface
     {
         public static void Action(GameAction action, params object[] args)

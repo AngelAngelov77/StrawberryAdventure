@@ -10,7 +10,6 @@
                                                 bonusDefense: defense,
                                                 bonusHitPoints: hitPoints)
         {
-
         }
     }
 }

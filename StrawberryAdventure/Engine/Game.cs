@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace StrawberryAdventure
 {
-    public sealed class TheGame
+    public sealed class Game
     {
-        private static volatile TheGame instance;
+        private static volatile Game instance;
         private static object syncRoot = new Object();
         private static LevelingModel _levelingModel = new LevelingModel();
-        List<Map> _maps;
+        private IList<Map> maps;
 
-        private TheGame()
+        private Game()
         {
             //ToDo : generate maps, create hero
         }
 
         //Singelton
-        public static TheGame GetInstance
+        public static Game GetInstance
         {
             get
             {
@@ -25,7 +25,7 @@ namespace StrawberryAdventure
                     lock (syncRoot)
                     {
                         if (instance == null)
-                            instance = new TheGame();
+                            instance = new Game();
                     }
                 }
 
@@ -33,15 +33,15 @@ namespace StrawberryAdventure
             }
         }
 
-        public List<Map> Maps
+        public IList<Map> Maps
         {
             get
             {
-                return _maps;
+                return maps;
             }
         }
 
-        public Character Hero
+        public ICharacter Hero
         {
             get
             {
@@ -87,7 +87,7 @@ namespace StrawberryAdventure
         {
             int damage = 0;
             int damageIndex = attacker.Attack - defender.Defense;
-            damage = Rnd.Random(7 * damageIndex);
+            damage = RandomGenerator.Random(7 * damageIndex);
             return damage;
         }
 

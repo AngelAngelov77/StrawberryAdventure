@@ -4,36 +4,34 @@ namespace StrawberryAdventure
 {
     public class NPC : BasicCharacter, INPC, IIdentifiable
     {
-        private int _id;
-        private List<ItemsDrop> _itemsDrop;
-        private int _experience;
+        //private int _id;
+        private IList<ItemsDrop> itemsDropList;
+        //private int _experience;
 
         public NPC(string name,
                    int hitPoint,
                    int attack,
                    int defense,
-                   List<ItemsDrop> itemsDrop)
+                   IList<ItemsDrop> itemsDrop)
         {
             Name = name;
             BasicHitPoints = hitPoint;
             BasicAttack = attack;
             BasicDefense = defense;
-            _itemsDrop = itemsDrop;
+            itemsDropList = itemsDrop;
         }
 
- 
-
-        public List<ItemsDrop> DroppingItems
+        public IList<ItemsDrop> DroppingItems
         {
             get
             {
-                return _itemsDrop;
+                return itemsDropList;
             }
         }
 
-        public List<BasicItem> ItemsDropped()
+        public IList<BasicItem> ItemsDropped()
         {
-            List<BasicItem> result = new List<BasicItem>();
+            var result = new List<BasicItem>();
             foreach (var item in DroppingItems)
             {
                 if (item.Dropped())

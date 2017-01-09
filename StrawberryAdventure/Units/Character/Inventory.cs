@@ -8,7 +8,8 @@ namespace StrawberryAdventure
 
         public Inventory()
         {
-            _items = new BasicItem[(int)ItemPositions.Count];
+            var positionsCount = (int)ItemPositions.Count;
+            _items = new BasicItem[positionsCount];
         }
 
         public BasicItem[] Items
@@ -36,6 +37,5 @@ namespace StrawberryAdventure
         {
             throw new NotImplementedException();
         }
-
     }
 }
