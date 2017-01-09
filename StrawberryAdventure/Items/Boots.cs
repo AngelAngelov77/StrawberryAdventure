@@ -3,12 +3,10 @@
     public class Boots : BasicItem
     {
         public Boots(string name,
-                     int defense,
-                     int evasion) : base(name,
+                     int defense) : base(name,
                                          BodyPositions.Feet,
                                          ItemType.Armor,
-                                         bonusDefense: defense,
-                                         bonusEvasion: evasion)
+                                         bonusDefense: defense)
         {
 
         }

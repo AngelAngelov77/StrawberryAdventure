@@ -6,22 +6,15 @@ namespace StrawberryAdventure
     {
         private int _experience;
 
-        public Character(string name, int hitPoints, int basicAttack, int basicDefense, int basicAccuracy, int basicEvasion,
-                         int skillPoints = 0, List<BasicSkill> skills = null)
+        public Character(string name, int hitPoints, int basicAttack, int basicDefense)
         {
             Name = name;
             BasicHitPoints = hitPoints;
             BasicAttack = basicAttack;
             BasicDefense = basicDefense;
-            BasicAccuracy = basicAccuracy;
-            BasicEvasion = basicEvasion;
-            SkillPoints = skillPoints;
-            Skills = skills;
         }
 
-        public Character(Character character) : this(character.Name, character.HitPoints, character.BasicAttack, character.BasicDefense, 
-                                                     character.BasicAccuracy, character.BasicEvasion,
-                                                     character.SkillPoints, character.Skills)
+        public Character(Character character) : this(character.Name, character.HitPoints, character.BasicAttack, character.BasicDefense)
         {
         }
 

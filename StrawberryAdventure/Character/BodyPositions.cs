@@ -27,14 +27,6 @@
         Hands,
         Fingers,
         Shoulders,
-        Backpack1,
-        Backpack2,
-        Backpack3,
-        Backpack4,
-        Backpack5,
-        Backpack6,
-        Backpack7,
-        BackpackLast,
         Count
     }
 

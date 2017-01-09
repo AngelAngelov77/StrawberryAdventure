@@ -12,34 +12,16 @@ namespace StrawberryAdventure
                    int hitPoint,
                    int attack,
                    int defense,
-                   int accuracy,
-                   int evasion,
-                   IInventory NPCInventory,
-                   int experience,
-                   List<ItemsDrop> itemsDrop,
-                   int level)
+                   List<ItemsDrop> itemsDrop)
         {
             Name = name;
             BasicHitPoints = hitPoint;
             BasicAttack = attack;
             BasicDefense = defense;
-            BasicAccuracy = accuracy;
-            BasicEvasion = evasion;
-            MyInventory = NPCInventory;
-            _experience = experience;
             _itemsDrop = itemsDrop;
-            Level = level;
-            _id = Identifiable.GetID();
         }
 
  
-        public int Experience
-        {
-            get
-            {
-                return _experience;
-            }
-        }
 
         public List<ItemsDrop> DroppingItems
         {

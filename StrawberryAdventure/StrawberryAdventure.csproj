@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character\ICharacter.cs" />
+    <Compile Include="Character\IInvetory.cs" />
     <Compile Include="Character\Inventory.cs" />
     <Compile Include="General\GameInterface.cs" />
     <Compile Include="General\Identifiable.cs" />
@@ -73,12 +74,10 @@
     <Compile Include="Items\Helmet.cs" />
     <Compile Include="Character\Character.cs" />
     <Compile Include="Character\BasicCharacter.cs" />
-    <Compile Include="Character\IInventory.cs" />
     <Compile Include="Items\BasicItem.cs" />
     <Compile Include="Character\IHuman.cs" />
     <Compile Include="General\IIdentifiable.cs" />
     <Compile Include="NPC\INPC.cs" />
-    <Compile Include="Skills\BasicSkill.cs" />
     <Compile Include="NPC\ItemsDrop.cs" />
     <Compile Include="Items\LeggingsArmor.cs" />
     <Compile Include="TheGame\Map.cs" />
@@ -86,8 +85,6 @@
     <Compile Include="TheGame\MapObjectType.cs" />
     <Compile Include="Items\Necklace.cs" />
     <Compile Include="NPC\NPC.cs" />
-    <Compile Include="Skills\ISkill.cs" />
-    <Compile Include="Skills\Skill.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Items\Ring.cs" />

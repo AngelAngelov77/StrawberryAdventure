@@ -2,7 +2,7 @@
 
 namespace StrawberryAdventure
 {
-    public abstract class BasicItem : IIdentifiable
+    public abstract class BasicItem
     {
         private int _id;
         public BodyPositions BodyPosition { get; private set; }
@@ -10,19 +10,8 @@ namespace StrawberryAdventure
         public int BonusAttack { get; private set; }
         public int BonusDefense { get; private set; }
         public int BonusHitPoints { get; private set; }
-        public int BonusAccuracy { get; private set; }
-        public int BonusEvasion { get; private set; }
         public ItemType Type { get; private set; }
         public string Name { get; private set; }
-        public int ExperienceModifier { get; private set; }
-
-        public int ID
-        {
-            get
-            {
-                return _id;
-            }
-        }
 
         public override string ToString()
         {
@@ -41,18 +30,6 @@ namespace StrawberryAdventure
             {
                 result.AppendLine($"Hit points: {BonusHitPoints}");
             }
-            if (BonusAccuracy > 0)
-            {
-                result.AppendLine($"Accuracy: {BonusAccuracy}");
-            }
-            if (BonusEvasion > 0)
-            {
-                result.AppendLine($"Evasion: {BonusEvasion}");
-            }
-            if (ExperienceModifier > 0)
-            {
-                result.AppendLine($"Experience bonus: {ExperienceModifier}");
-            }
 
             return result.ToString();
         }
@@ -63,10 +40,7 @@ namespace StrawberryAdventure
                          bool anyOfBodyPositions = true,
                          int bonusAttack = 0,
                          int bonusDefense = 0,
-                         int bonusHitPoints = 0,
-                         int bonusAccuracy = 0,
-                         int bonusEvasion = 0,
-                         int experienceModifier = 0)
+                         int bonusHitPoints = 0)
         {
             Name = name;
             BodyPosition = bodyPosition;
@@ -75,8 +49,6 @@ namespace StrawberryAdventure
             BonusAttack = bonusAttack;
             BonusDefense = bonusDefense;
             BonusHitPoints = bonusHitPoints;
-            BonusAccuracy = bonusAccuracy;
-            BonusEvasion = bonusEvasion;
         }
     }
 }

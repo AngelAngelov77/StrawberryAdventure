@@ -55,7 +55,7 @@ namespace StrawberryAdventure
             Maps.Add(map);
         }
 
-        
+
 
         private bool Battle(Character hero, NPC npc)
         {
@@ -86,17 +86,8 @@ namespace StrawberryAdventure
         private static int DamageCalculator(BasicCharacter attacker, BasicCharacter defender)
         {
             int damage = 0;
-            if (Rnd.Random(attacker.Accuracy) > Rnd.Random(defender.Evasion)) //Check successful hit
-            {
-                int damageIndex = attacker.Attack - defender.Defense;
-                damage = Rnd.Random(7 * damageIndex);
-                bool critical = Rnd.Random(100) < 15;
-                if (critical)
-                {
-                    damage = 2 * damage;
-                }
-            }
-
+            int damageIndex = attacker.Attack - defender.Defense;
+            damage = Rnd.Random(7 * damageIndex);
             return damage;
         }
 

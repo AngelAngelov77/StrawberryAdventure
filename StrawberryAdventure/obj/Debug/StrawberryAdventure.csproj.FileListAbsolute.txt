@@ -1,0 +1,6 @@
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.exe.config
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.csprojResolveAssemblyReference.cache
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.exe
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\bin\Debug\StrawberryAdventure.pdb
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.exe
+D:\GitHub\Strawberry\StrawberryAdventure\StrawberryAdventure\obj\Debug\StrawberryAdventure.pdb
