@@ -7,7 +7,7 @@ namespace StrawberryAdventure
     {
         private static volatile Game instance;
         private static object syncRoot = new Object();
-        private static LevelingModel _levelingModel = new LevelingModel();
+        private static LevelingModel levelingModel = new LevelingModel();
         private IList<Map> maps;
 
         private Game()
