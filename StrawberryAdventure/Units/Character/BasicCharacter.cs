@@ -47,9 +47,19 @@ namespace StrawberryAdventure
             }
         }
 
+        public BasicCharacter(string name,int hitPoints, int attack, int defense)
+        {
+            this.Name = name;
+            this.BasicHitPoints = hitPoints;
+            this.BasicAttack = attack;
+            this.BasicDefense = defense;
+            this.Level = 0;
+        }
+
         public void LevelUp()
         {
             throw new NotImplementedException();
         }
+
     }
 }

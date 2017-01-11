@@ -78,12 +78,16 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Engine\Game.cs" />
+    <Compile Include="Units\Character\Assassin.cs" />
     <Compile Include="Units\Character\BasicCharacter.cs" />
     <Compile Include="Units\Character\Character.cs" />
     <Compile Include="Units\Character\Inventory.cs" />
+    <Compile Include="Units\Character\Tank.cs" />
+    <Compile Include="Units\Character\Warrior.cs" />
     <Compile Include="Units\Items\Armor.cs" />
     <Compile Include="Units\Items\BasicItem.cs" />
     <Compile Include="Units\Items\Boots.cs" />
+    <Compile Include="Units\Items\Drops.cs" />
     <Compile Include="Units\Items\Gloves.cs" />
     <Compile Include="Units\Items\Helmet.cs" />
     <Compile Include="Units\Items\Leggings.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="Units\Items\Weapon.cs" />
     <Compile Include="Units\NPC\ItemsDrop.cs" />
     <Compile Include="Units\NPC\NPC.cs" />
+    <Compile Include="Utils\ItemGenerator.cs" />
     <Compile Include="Utils\RandomGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
