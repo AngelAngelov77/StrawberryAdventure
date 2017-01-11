@@ -42,7 +42,7 @@ namespace StrawberryAdventure
                          int bonusDefense = 0,
                          int bonusHitPoints = 0)
         {
-            this.Name = name;
+            Name = name;
             BodyPosition = bodyPosition;
             AnyOfBodyPositions = anyOfBodyPositions;
             Type = type;

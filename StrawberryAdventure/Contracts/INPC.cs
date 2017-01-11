@@ -4,8 +4,8 @@ namespace StrawberryAdventure
 {
     public interface INPC
     {
-        BasicItem DroppingItems { get; }
+        IList<ItemsDrop> DroppingItems { get; }
 
-        BasicItem ItemsDropped();
+        IList<BasicItem> ItemsDropped();
     }
 }

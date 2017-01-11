@@ -1,11 +1,16 @@
-﻿using System.Collections.Generic;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
     public class Helmet : BasicItem
     {
-        public Helmet(string name,int defense,int hitPoints) : base(name, BodyPositions.Head, ItemType.Armor, bonusDefense: defense, bonusHitPoints: hitPoints)
+        public Helmet(string name,
+                      int defense,
+                      int hitPoints) : base(name,
+                                            BodyPositions.Head,
+                                            ItemType.Armor,
+                                            bonusDefense: defense,
+                                            bonusHitPoints: hitPoints)
         {
+
         }
     }
 }
