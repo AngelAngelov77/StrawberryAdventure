@@ -6,7 +6,7 @@ namespace StrawberryAdventure
     {
         private int _experience;
 
-        public Character(string name, int hitPoints, int basicAttack, int basicDefense) : base(name,hitPoints, basicAttack, basicDefense)
+        public Character(string name, int hitPoints, int basicAttack, int basicDefense)
         {
             Name = name;
             BasicHitPoints = hitPoints;
