@@ -11,10 +11,8 @@ namespace StrawberryAdventure
 
             List<ItemsDrop> mravkaDrop = new List<ItemsDrop>();
             mravkaDrop.Add(new ItemsDrop(new Weapon("Mitika", 1), 80));
-            mravkaDrop.Add(new ItemsDrop(new BodyArmor("Riznica", 10, 80), 40));
+            mravkaDrop.Add(new ItemsDrop(new Armor("Riznica", 10, 80), 40));
             mravkaDrop.Add(new ItemsDrop(new Necklace("Ogyrlica", 10), 5));
-            NPC mravka = new NPC("Fredi Mravkata", 10, 1, 1, mravkaDrop);
-
             List<BasicItem> chestItems = new List<BasicItem>();
             chestItems.Add(new Weapon("Yatagan", 10));
             chestItems.Add(new Helmet("Kaska", 4, 10));

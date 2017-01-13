@@ -1,27 +1,17 @@
-﻿using System.Collections.Generic;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
+    using System.Collections.Generic;
+
     public class NPC : BasicCharacter, INPC, IIdentifiable
     {
         //private int _id;
-        private IList<ItemsDrop> itemsDropList;
-        //private int _experience;
+        private BasicItem itemsDropList;
 
-        public NPC(string name,
-                   int hitPoint,
-                   int attack,
-                   int defense,
-                   IList<ItemsDrop> itemsDrop)
-        {
-            Name = name;
-            BasicHitPoints = hitPoint;
-            BasicAttack = attack;
-            BasicDefense = defense;
-            itemsDropList = itemsDrop;
+        public NPC(string name, int hitPoint, int attack, int defense, BasicItem itemsDrop) : base(name,hitPoint,attack,defense)
+        {            
         }
 
-        public IList<ItemsDrop> DroppingItems
+        public BasicItem DroppingItems
         {
             get
             {
@@ -29,17 +19,9 @@ namespace StrawberryAdventure
             }
         }
 
-        public IList<BasicItem> ItemsDropped()
+        public BasicItem ItemsDropped()
         {
-            var result = new List<BasicItem>();
-            foreach (var item in DroppingItems)
-            {
-                if (item.Dropped())
-                {
-                    result.Add(item.Item);
-                }
-            }
-            return result;
+             return itemsDropList;
         }
     }
 }
