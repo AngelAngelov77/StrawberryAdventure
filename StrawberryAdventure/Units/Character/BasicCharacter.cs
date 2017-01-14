@@ -61,5 +61,14 @@ namespace StrawberryAdventure
             throw new NotImplementedException();
         }
 
+        public void characterDies(/*some character*/)
+        {
+            if (HitPoints == 0)
+            {
+                Console.WriteLine("You have been Killed");
+                Console.WriteLine("_____Game Over_____");
+            }
+        }
+
     }
 }
