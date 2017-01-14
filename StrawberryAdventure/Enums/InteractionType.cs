@@ -1,7 +1,8 @@
-﻿using System;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System;
+
     public enum GameInteraction
     {
         None = 0,

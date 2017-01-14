@@ -1,7 +1,8 @@
-﻿using System;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
+    using System;
+
+
     public enum GameAction
     {
         None = 0,

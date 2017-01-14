@@ -1,7 +1,8 @@
-﻿using System;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
+    using System;
+
+
     public static class GlobalConstants
     {
         public const int MapHeight = 10;

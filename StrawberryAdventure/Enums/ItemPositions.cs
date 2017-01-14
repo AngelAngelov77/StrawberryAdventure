@@ -1,7 +1,8 @@
-﻿using System;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System;
+
     public enum ItemPositions
     {
         None = 0,

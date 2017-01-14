@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public static class NPCGenerator
     {
         public static void GenerateNPCs()

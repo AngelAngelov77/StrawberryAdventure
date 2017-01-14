@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StrawberryAdventure.Units.NPC
+﻿namespace StrawberryAdventure.Units.NPC
 {
+    using System;
+
     class NPC_BOSS : INPC
     {
         BasicItem INPC.DroppingItems

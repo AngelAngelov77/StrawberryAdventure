@@ -1,7 +1,8 @@
-﻿using System;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System;
+
     class Inventory : IInventory
     {
         BasicItem[] _items;

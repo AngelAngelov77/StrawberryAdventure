@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System;
+    using System.Collections.Generic;
+
     public static class GameInterface
     {
         public static void Action(GameAction action, params object[] args)

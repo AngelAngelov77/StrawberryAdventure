@@ -1,7 +1,8 @@
-﻿using System;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System;
+
     public abstract class BasicCharacter : ICharacter, IIdentifiable
     {
         private int _id;
