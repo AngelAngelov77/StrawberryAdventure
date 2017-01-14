@@ -70,6 +70,7 @@
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\MapObjectType.cs" />
     <Compile Include="General\GameInterface.cs" />
+    <Compile Include="General\GlobalConstants.cs" />
     <Compile Include="General\Identifiable.cs" />
     <Compile Include="General\LevelingModel.cs" />
     <Compile Include="Engine\Chest.cs" />
@@ -99,6 +100,8 @@
     <Compile Include="Utils\ConsoleReader.cs" />
     <Compile Include="Utils\ConsoleWriter.cs" />
     <Compile Include="Utils\ItemGenerator.cs" />
+    <Compile Include="Utils\MapGenerator.cs" />
+    <Compile Include="Utils\NPCGenerator.cs" />
     <Compile Include="Utils\RandomGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
