@@ -70,5 +70,13 @@ namespace StrawberryAdventure
             }
         }
 
+        public void idleCharacter(/*some character*/)
+        {
+            //if (character has not moved in 5min )
+            //{
+            //    Console.WriteLine("Are you taking a piss");
+            //}
+        }
+
     }
 }
