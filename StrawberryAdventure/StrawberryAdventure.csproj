@@ -98,6 +98,7 @@
     <Compile Include="Units\Items\Weapon.cs" />
     <Compile Include="Units\NPC\ItemsDrop.cs" />
     <Compile Include="Units\NPC\NPC.cs" />
+    <Compile Include="Units\NPC\NPC_BOSS.cs" />
     <Compile Include="Utils\ConsoleReader.cs" />
     <Compile Include="Utils\ConsoleWriter.cs" />
     <Compile Include="Utils\ItemGenerator.cs" />
