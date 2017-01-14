@@ -5,6 +5,9 @@
 
     public class NPC : BasicCharacter, INPC, IIdentifiable
     {
+        private int healthPoints;
+
+
         //private int _id;
         private BasicItem itemsDropList;
 
@@ -22,12 +25,22 @@
 
         public BasicItem ItemsDropped()
         {
-             return itemsDropList;
+            return itemsDropList;
         }
 
         public void DropItem()
         {
+            //TODO finish
             Random rand = new Random(DateTime.Now.Millisecond);
+        }
+
+        public void killNPC(NPC npc)
+        {
+            if (npc.healthPoints == 0)
+            {
+                //drop item
+                // delete npc
+            }
         }
               
     }
