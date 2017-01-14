@@ -63,6 +63,7 @@
     <Compile Include="Contracts\IIdentifiable.cs" />
     <Compile Include="Contracts\IInvetory.cs" />
     <Compile Include="Contracts\INPC.cs" />
+    <Compile Include="Engine\WelcomeScreen.cs" />
     <Compile Include="Enums\ActionType.cs" />
     <Compile Include="Enums\BodyPositions.cs" />
     <Compile Include="Enums\InteractionType.cs" />

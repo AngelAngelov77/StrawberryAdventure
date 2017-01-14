@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using StrawberryAdventure.Engine;
 namespace StrawberryAdventure
 {
     public class Startup
     {
         public static void Main()
         {
+            //WElcome
+            Console.WriteLine(WelcomeScreen.Welcome());
+            
+            WelcomeScreen.Song();
+
+            /////////////////////////////////////////////////////////
+
+
             Game StrawberryAdventute = Game.GetInstance;
 
             List<ItemsDrop> mravkaDrop = new List<ItemsDrop>();
