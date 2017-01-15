@@ -23,10 +23,9 @@
             throw new NotImplementedException();
         }
 
-        public void Attack()
+        public void Attack(BasicCharacter character)
         {
-            //TODO
-            //attack plyer
+            //this.character.healts -= NPC_BOSS.attack;
         }
     }
 }
