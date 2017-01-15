@@ -4,6 +4,12 @@
 
     class NPC_BOSS : INPC
     {
+        
+
+        public NPC_BOSS(string name, int attack, int defense)
+        {
+                
+        }
         BasicItem INPC.DroppingItems
         {
             get
