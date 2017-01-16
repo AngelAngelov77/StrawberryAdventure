@@ -1,8 +1,11 @@
-﻿namespace StrawberryAdventure
+﻿namespace StrawberryAdventure.Units.Characters.NPC
 {
+    using Contracts;
+    using StrawberryAdventure.Characters;
     using System.Collections.Generic;
+    using System;
 
-    public class NPC : BasicCharacter, INPC, IIdentifiable
+    public class NPC : Character, INPC
     {
         //private int _id;
         private BasicItem itemsDropList;
@@ -17,6 +20,11 @@
             {
                 return itemsDropList;
             }
+        }
+
+        public BasicItem DropItem()
+        {
+            throw new NotImplementedException();
         }
 
         public BasicItem ItemsDropped()

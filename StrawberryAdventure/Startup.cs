@@ -7,7 +7,7 @@ namespace StrawberryAdventure
     {
         public static void Main()
         {
-            Game StrawberryAdventute = Game.GetInstance;
+            Game StrawberryAdventure = Game.GetInstance;
 
             List<ItemsDrop> mravkaDrop = new List<ItemsDrop>();
             mravkaDrop.Add(new ItemsDrop(new Weapon("Mitika", 1), 80));
@@ -42,7 +42,7 @@ namespace StrawberryAdventure
             {
                 keyinfo = Console.ReadKey();
                 //ToDo - handle arrows, w, a, s, d - moving the hero, h - show hero menu, m - show map (optional)
-                StrawberryAdventute.HandleInput(keyinfo);
+                StrawberryAdventure.HandleInput(keyinfo);
             }
             while (keyinfo.Key != ConsoleKey.Escape);
         }

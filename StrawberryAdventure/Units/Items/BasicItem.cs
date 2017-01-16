@@ -5,7 +5,7 @@ namespace StrawberryAdventure
     public abstract class BasicItem
     {
         private int _id;
-        public BodyPositions BodyPosition { get; private set; }
+        //public BodyPositions BodyPosition { get; private set; }
         public bool AnyOfBodyPositions { get; private set; }
         public int BonusAttack { get; private set; }
         public int BonusDefense { get; private set; }
@@ -34,21 +34,21 @@ namespace StrawberryAdventure
             return result.ToString();
         }
 
-        public BasicItem(string name,
-                         BodyPositions bodyPosition,
-                         ItemType type,
-                         bool anyOfBodyPositions = true,
-                         int bonusAttack = 0,
-                         int bonusDefense = 0,
-                         int bonusHitPoints = 0)
-        {
-            this.Name = name;
-            BodyPosition = bodyPosition;
-            AnyOfBodyPositions = anyOfBodyPositions;
-            Type = type;
-            BonusAttack = bonusAttack;
-            BonusDefense = bonusDefense;
-            BonusHitPoints = bonusHitPoints;
-        }
+        //public BasicItem(string name,
+        //                 BodyPositions bodyPosition,
+        //                 ItemType type,
+        //                 bool anyOfBodyPositions = true,
+        //                 int bonusAttack = 0,
+        //                 int bonusDefense = 0,
+        //                 int bonusHitPoints = 0)
+        //{
+        //    this.Name = name;
+        //    BodyPosition = bodyPosition;
+        //    AnyOfBodyPositions = anyOfBodyPositions;
+        //    Type = type;
+        //    BonusAttack = bonusAttack;
+        //    BonusDefense = bonusDefense;
+        //    BonusHitPoints = bonusHitPoints;
+        //}
     }
 }

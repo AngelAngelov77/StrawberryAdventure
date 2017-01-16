@@ -1,4 +1,7 @@
-﻿using System;
+﻿using StrawberryAdventure.Characters;
+using StrawberryAdventure.Contracts;
+using StrawberryAdventure.Units.Characters.NPC;
+using System;
 using System.Collections.Generic;
 
 namespace StrawberryAdventure

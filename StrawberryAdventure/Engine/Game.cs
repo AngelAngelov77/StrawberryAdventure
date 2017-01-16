@@ -1,4 +1,7 @@
-﻿using System;
+﻿using StrawberryAdventure.Characters;
+using StrawberryAdventure.Contracts;
+using StrawberryAdventure.Units.Characters.NPC;
+using System;
 using System.Collections.Generic;
 
 namespace StrawberryAdventure
@@ -7,7 +10,7 @@ namespace StrawberryAdventure
     {
         private static volatile Game instance;
         private static object syncRoot = new Object();
-        private static LevelingModel _levelingModel = new LevelingModel();
+        //private static LevelingModel _levelingModel = new LevelingModel();
         private IList<Map> maps;
 
         private Game()
@@ -57,33 +60,33 @@ namespace StrawberryAdventure
 
 
 
-        private bool Battle(Character hero, NPC npc)
-        {
-            GameInterface.Action(GameAction.BattleStarted, hero, npc);
-            int heroHP = hero.HitPoints;
-            int npcHP = npc.HitPoints;
-            while (true)
-            {
-                int damage = DamageCalculator(hero, npc); //hero deals damage to npc
-                GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
-                npcHP -= damage;
-                if (npcHP <= 0)
-                {
-                    GameInterface.Action(GameAction.BattleWon, hero, npc);
-                    return true;
-                }
-                damage = DamageCalculator(npc, hero); //npc deals damage to hero
-                GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
-                heroHP -= damage;
-                if (heroHP <= 0)
-                {
-                    GameInterface.Action(GameAction.BattleLost, hero);
-                    return false;
-                }
-            }
-        }
+        //private bool Battle(Character hero, NPC npc)
+        //{
+            //GameInterface.Action(GameAction.BattleStarted, hero, npc);
+            //int heroHP = hero.HitPoints;
+            //int npcHP = npc.HitPoints;
+            //while (true)
+            //{
+            //    int damage = DamageCalculator(hero, npc); //hero deals damage to npc
+            //    GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
+            //    npcHP -= damage;
+            //    if (npcHP <= 0)
+            //    {
+            //        GameInterface.Action(GameAction.BattleWon, hero, npc);
+            //        return true;
+            //    }
+            //    damage = DamageCalculator(npc, hero); //npc deals damage to hero
+            //    GameInterface.Action(GameAction.BattleHit, npc, hero, heroHP, damage);
+            //    heroHP -= damage;
+            //    if (heroHP <= 0)
+            //    {
+            //        GameInterface.Action(GameAction.BattleLost, hero);
+            //        return false;
+            //    }
+            //}
+       // }
 
-        private static int DamageCalculator(BasicCharacter attacker, BasicCharacter defender)
+        private static int DamageCalculator(Character attacker, Character defender)
         {
             int damage = 0;
             int damageIndex = attacker.Attack - defender.Defense;
