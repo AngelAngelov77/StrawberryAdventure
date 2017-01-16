@@ -1,7 +1,8 @@
-﻿using System.Text;
-
+﻿
 namespace StrawberryAdventure
 {
+    using System.Text;
+
     public abstract class BasicItem
     {
         private int _id;

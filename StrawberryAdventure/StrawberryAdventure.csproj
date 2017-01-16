@@ -62,6 +62,7 @@
     <Compile Include="Contracts\ICharacter.cs" />
     <Compile Include="Contracts\IHuman.cs" />
     <Compile Include="Contracts\INPC.cs" />
+    <Compile Include="Engine\WelcomeScreen.cs" />
     <Compile Include="Enums\ActionType.cs" />
     <Compile Include="Enums\Human.cs" />
     <Compile Include="Enums\ItemType.cs" />
@@ -90,9 +91,17 @@
     <Compile Include="Units\Items\Necklace.cs" />
     <Compile Include="Units\Items\Ring.cs" />
     <Compile Include="Units\Items\Weapon.cs" />
+<<<<<<< HEAD
     <Compile Include="Units\Characters\NPC\ItemsDrop.cs" />
     <Compile Include="Units\Characters\NPC\NPC.cs" />
     <Compile Include="Utils\InvalidGameValueException.cs" />
+=======
+    <Compile Include="Units\NPC\ItemsDrop.cs" />
+    <Compile Include="Units\NPC\NPC.cs" />
+    <Compile Include="Units\NPC\NPC_BOSS.cs" />
+    <Compile Include="Utils\ConsoleReader.cs" />
+    <Compile Include="Utils\ConsoleWriter.cs" />
+>>>>>>> origin/shortVersion
     <Compile Include="Utils\ItemGenerator.cs" />
     <Compile Include="Utils\MapGenerator.cs" />
     <Compile Include="Utils\NPCGenerator.cs" />
