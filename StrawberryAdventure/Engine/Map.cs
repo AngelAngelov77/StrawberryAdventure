@@ -6,12 +6,12 @@ namespace StrawberryAdventure
     public class Map
     {
         private StrawberryAdventure.MapObject[,] _layout;
-        private int width;
-        private int height;
-        private List<NPC> monsters;
-        private List<BasicItem> items;
-        private Character strawberryHero;
-        private string[] itemPrefix = { "Wood", "Stone", "Iron", "Steel", "Mithril" };
+        private int _width;
+        private int _height;
+        private List<NPC> _monsters;
+        private List<BasicItem> _items;
+        private Character _strawberryHero;
+        private string[] _itemPrefix = { "Wood", "Stone", "Iron", "Steel", "Mithril" };
 
         public Map(int width, int height)
         {
@@ -43,14 +43,14 @@ namespace StrawberryAdventure
         {
             get
             {
-                return width;
+                return _width;
             }
 
             private set
             {
                 if (value >= 20)
                 {
-                    width = value;
+                    _width = value;
                 }
                 else
                 {
@@ -63,14 +63,14 @@ namespace StrawberryAdventure
         {
             get
             {
-                return height;
+                return _height;
             }
 
             private set
             {
                 if (value >= 20)
                 {
-                    height = value;
+                    _height = value;
                 }
                 else
                 {

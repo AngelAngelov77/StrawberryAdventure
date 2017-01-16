@@ -1,14 +1,8 @@
 ﻿namespace StrawberryAdventure
 {
-    public class BodyArmor : BasicItem
+    public class Armor : BasicItem
     {
-        public BodyArmor(string name,
-                         int defense,
-                         int hitPoints) : base(name,
-                                                BodyPositions.Body,
-                                                ItemType.Armor,
-                                                bonusDefense: defense,
-                                                bonusHitPoints: hitPoints)
+        public Armor(string name,int defense,int hitPoints) : base(name,BodyPositions.Body,ItemType.Armor,bonusDefense: defense,bonusHitPoints: hitPoints)
         {
         }
     }

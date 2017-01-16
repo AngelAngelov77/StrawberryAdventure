@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -71,6 +70,7 @@
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\MapObjectType.cs" />
     <Compile Include="General\GameInterface.cs" />
+    <Compile Include="General\GlobalConstants.cs" />
     <Compile Include="General\Identifiable.cs" />
     <Compile Include="General\LevelingModel.cs" />
     <Compile Include="Engine\Chest.cs" />
@@ -79,12 +79,16 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Engine\Game.cs" />
+    <Compile Include="Units\Character\Assassin.cs" />
     <Compile Include="Units\Character\BasicCharacter.cs" />
     <Compile Include="Units\Character\Character.cs" />
     <Compile Include="Units\Character\Inventory.cs" />
+    <Compile Include="Units\Character\Tank.cs" />
+    <Compile Include="Units\Character\Warrior.cs" />
     <Compile Include="Units\Items\Armor.cs" />
     <Compile Include="Units\Items\BasicItem.cs" />
     <Compile Include="Units\Items\Boots.cs" />
+    <Compile Include="Units\Items\Drops.cs" />
     <Compile Include="Units\Items\Gloves.cs" />
     <Compile Include="Units\Items\Helmet.cs" />
     <Compile Include="Units\Items\Leggings.cs" />
@@ -93,6 +97,11 @@
     <Compile Include="Units\Items\Weapon.cs" />
     <Compile Include="Units\NPC\ItemsDrop.cs" />
     <Compile Include="Units\NPC\NPC.cs" />
+    <Compile Include="Utils\ConsoleReader.cs" />
+    <Compile Include="Utils\ConsoleWriter.cs" />
+    <Compile Include="Utils\ItemGenerator.cs" />
+    <Compile Include="Utils\MapGenerator.cs" />
+    <Compile Include="Utils\NPCGenerator.cs" />
     <Compile Include="Utils\RandomGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,121 +121,6 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C44AC19E-B249-4584-80B8-CD5DBEC5AFD8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StrawberryAdventure</RootNamespace>
-    <AssemblyName>StrawberryAdventure</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Contracts\ICharacter.cs" />
-    <Compile Include="Contracts\IHuman.cs" />
-    <Compile Include="Contracts\IIdentifiable.cs" />
-    <Compile Include="Contracts\IInvetory.cs" />
-    <Compile Include="Contracts\INPC.cs" />
-    <Compile Include="Enums\ActionType.cs" />
-    <Compile Include="Enums\BodyPositions.cs" />
-    <Compile Include="Enums\InteractionType.cs" />
-    <Compile Include="Enums\ItemPositions.cs" />
-    <Compile Include="Enums\ItemType.cs" />
-    <Compile Include="Enums\MapObjectType.cs" />
-    <Compile Include="General\GameInterface.cs" />
-    <Compile Include="General\Identifiable.cs" />
-    <Compile Include="General\LevelingModel.cs" />
-    <Compile Include="Engine\Chest.cs" />
-    <Compile Include="Engine\Map.cs" />
-    <Compile Include="Engine\MapObject.cs" />
-    <Compile Include="Startup.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Engine\Game.cs" />
-    <Compile Include="Units\Character\BasicCharacter.cs" />
-    <Compile Include="Units\Character\Character.cs" />
-    <Compile Include="Units\Character\Inventory.cs" />
-    <Compile Include="Units\Items\Armor.cs" />
-    <Compile Include="Units\Items\BasicItem.cs" />
-    <Compile Include="Units\Items\Boots.cs" />
-    <Compile Include="Units\Items\Gloves.cs" />
-    <Compile Include="Units\Items\Helmet.cs" />
-    <Compile Include="Units\Items\Leggings.cs" />
-    <Compile Include="Units\Items\Necklace.cs" />
-    <Compile Include="Units\Items\Ring.cs" />
-    <Compile Include="Units\Items\Weapon.cs" />
-    <Compile Include="Units\NPC\ItemsDrop.cs" />
-    <Compile Include="Units\NPC\NPC.cs" />
-    <Compile Include="Utils\RandomGenerator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
->>>>>>> origin/shortVersion
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
