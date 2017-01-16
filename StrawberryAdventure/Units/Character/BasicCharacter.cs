@@ -1,8 +1,7 @@
-﻿
+﻿using System;
+
 namespace StrawberryAdventure
 {
-    using System;
-
     public abstract class BasicCharacter : ICharacter, IIdentifiable
     {
         private int _id;
@@ -60,23 +59,6 @@ namespace StrawberryAdventure
         public void LevelUp()
         {
             throw new NotImplementedException();
-        }
-
-        public void characterDies(/*some character*/)
-        {
-            if (HitPoints == 0)
-            {
-                Console.WriteLine("You have been Killed");
-                Console.WriteLine("_____Game Over_____");
-            }
-        }
-
-        public void idleCharacter(/*some character*/)
-        {
-            //if (character has not moved in 5min )
-            //{
-            //    Console.WriteLine("Are you taking a piss");
-            //}
         }
 
     }

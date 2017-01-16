@@ -1,4 +1,9 @@
-﻿namespace StrawberryAdventure
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace StrawberryAdventure
 {
     public class MapGenerator
     {
@@ -16,7 +21,7 @@
                 // Starts from 1 because on ( 0;0 ) is the player
                 for (int j = 1; j < GlobalConstants.MapWidth; j++)
                 {
-                    Console.Write(gameField[i, j]);
+                    ConsoleWriter.Write(gameField[i, j]);
                 }
             }
         }
@@ -25,11 +30,11 @@
         {
             for (int i = 0; i < GlobalConstants.MapHeight; i++)
             {
-                    ArrangeLineCharacters(gameField, i);
+                    ArrangeLineCharacters(ref gameField, i);
             }
         }
 
-        private static void ArrangeLineCharacters(char[,] gameField, int row)
+        private static void ArrangeLineCharacters(ref char[,] gameField, int row)
         {
             // TODO: NPCs can be named with indexes ( 1,2,3 )
             // Example: ---------1-------*--

@@ -1,25 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using StrawberryAdventure.Engine;
+
 namespace StrawberryAdventure
 {
     public class Startup
     {
         public static void Main()
         {
-<<<<<<< HEAD
-            Game StrawberryAdventure = Game.GetInstance;
-=======
-            //WElcome
-            Console.WriteLine(WelcomeScreen.Welcome());
-            
-            WelcomeScreen.Song();
-
-            /////////////////////////////////////////////////////////
-
-
             Game StrawberryAdventute = Game.GetInstance;
->>>>>>> origin/shortVersion
 
             List<ItemsDrop> mravkaDrop = new List<ItemsDrop>();
             mravkaDrop.Add(new ItemsDrop(new Weapon("Mitika", 1), 80));
@@ -54,7 +42,7 @@ namespace StrawberryAdventure
             {
                 keyinfo = Console.ReadKey();
                 //ToDo - handle arrows, w, a, s, d - moving the hero, h - show hero menu, m - show map (optional)
-                StrawberryAdventure.HandleInput(keyinfo);
+                StrawberryAdventute.HandleInput(keyinfo);
             }
             while (keyinfo.Key != ConsoleKey.Escape);
         }

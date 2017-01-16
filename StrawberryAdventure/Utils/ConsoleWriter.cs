@@ -1,8 +1,7 @@
-﻿
+﻿using System;
+
 namespace StrawberryAdventure
 {
-    using System;
-
     public static class ConsoleWriter
     {
         public static void Write(char text)

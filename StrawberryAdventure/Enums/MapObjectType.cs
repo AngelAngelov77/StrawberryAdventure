@@ -5,6 +5,6 @@
         Empty,
         Chest,
         NPC,
-        Goal
+        Obstracle
     }
 }

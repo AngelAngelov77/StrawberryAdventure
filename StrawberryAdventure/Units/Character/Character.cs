@@ -1,8 +1,7 @@
-﻿
+﻿using System.Collections.Generic;
+
 namespace StrawberryAdventure
 {
-    using System.Collections.Generic;
-
     public class Character : BasicCharacter, IHuman
     {
         private int _experience;

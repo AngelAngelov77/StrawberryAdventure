@@ -1,8 +1,7 @@
-﻿
+﻿using System.Collections.Generic;
+using System.Linq;
 namespace StrawberryAdventure
 {
-    using System.Collections.Generic;
-    using System.Linq;
     public static class ItemGenerator
     {
         public static Armor GetArmor(string name)

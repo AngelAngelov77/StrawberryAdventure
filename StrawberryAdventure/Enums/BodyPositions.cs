@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure
 {
-    public enum ItemPositions
+    public enum BodyPositions
     {
         None = 0,
         LeftHand,
@@ -15,6 +13,6 @@ namespace StrawberryAdventure
         Hands,
         Fingers,
         Shoulders,
-        Count
+        Backpack
     }
 }

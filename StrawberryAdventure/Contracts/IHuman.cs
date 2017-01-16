@@ -1,11 +1,9 @@
-﻿using StrawberryAdventure.Contracts;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace StrawberryAdventure.Contracts
+﻿namespace StrawberryAdventure
 {
-    public interface IHuman : ICharacter
+    public interface IHuman
     {
-        ICollection<IBasicItem> Items { get; }        
+        int Experience { get; }
+
+        int ExperienceForNextLevel { get; }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace StrawberryAdventure.Contracts
+﻿namespace StrawberryAdventure
 {
-    public interface ICharacter
+    public interface ICharacter : IIdentifiable
     {
         string Name { get; }
 

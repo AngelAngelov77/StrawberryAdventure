@@ -1,8 +1,7 @@
-﻿
+﻿using System;
 
 namespace StrawberryAdventure
 {
-    using System;
     public static class RandomGenerator
     {
         static Random rnd;
