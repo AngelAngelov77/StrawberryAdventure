@@ -17,6 +17,7 @@ namespace StrawberryAdventure.Utils
         public const int InitialCol = 7;
 
         //ingame messages
+        public const string TextureEncounter = "*One step closer to the MAGIC STRAWBERRY!*";
         public const string RockEncounter = "You cannot move there - a rock in the path!";
         public const string ChestEncounter = "You found a chest! There is {0} inside and you get +{1} {2}!";
         public const string EnemyEncounter = "Enemy {0} encountered!";

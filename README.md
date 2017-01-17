@@ -10,8 +10,6 @@ Main class: Startup - creates instance of The Game class, using Singleton patter
  - 'moveset' command that shows the four move options
  - 'options' command that shows all above
 
- We solve the problem with the boring games :)
-
 Team Strawberry members list:
 - AngelAngelov77
 - LastUser

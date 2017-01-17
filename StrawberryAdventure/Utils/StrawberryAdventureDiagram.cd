@@ -87,7 +87,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="StrawberryAdventure.Engine.Map" Collapsed="true">
-    <Position X="20.25" Y="1.5" Width="1.5" />
+    <Position X="18.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAEAAAgBAAAAAAACACAAAAAAAAAAAAABAAAAAAABA=</HashCode>
       <FileName>Engine\Map.cs</FileName>
@@ -126,28 +126,28 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="StrawberryAdventure.Startup" Collapsed="true">
-    <Position X="22" Y="1.5" Width="1.5" />
+    <Position X="22" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Startup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StrawberryAdventure.Utils.Generator" Collapsed="true">
-    <Position X="22" Y="0.5" Width="1.5" />
+    <Position X="22" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAQAAAEAAAIAAAAAA=</HashCode>
       <FileName>Utils\Generator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StrawberryAdventure.Utils.InvalidGameValueException" Collapsed="true">
-    <Position X="18.5" Y="1.5" Width="1.5" />
+    <Position X="18.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Utils\InvalidGameValueException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StrawberryAdventure.Utils.Validator" Collapsed="true">
-    <Position X="18.5" Y="2.5" Width="1.5" />
+    <Position X="20.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEACAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Utils\Validator.cs</FileName>
@@ -156,7 +156,7 @@
   <Struct Name="StrawberryAdventure.Utils.Constants" Collapsed="true">
     <Position X="18.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIBSAAQBgAAIksAACAAAhqABCkBDACwClEgAAARCgAI=</HashCode>
+      <HashCode>AIBSAAQFgAAIksAACAAAhqABCkBDACwClEgAAARCgAI=</HashCode>
       <FileName>Utils\Constants.cs</FileName>
     </TypeIdentifier>
   </Struct>

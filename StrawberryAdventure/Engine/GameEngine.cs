@@ -97,6 +97,7 @@ namespace StrawberryAdventure.Engine
             switch (Map.GameMap[row, col])
             {
                 case Constants.MapTexture:
+                    Console.WriteLine(Constants.TextureEncounter);
                     ChangeHeroPosition(row, col);
                     break;
 
