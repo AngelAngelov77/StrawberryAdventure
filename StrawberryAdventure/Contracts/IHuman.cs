@@ -1,9 +1,13 @@
-﻿namespace StrawberryAdventure
-{
-    public interface IHuman
-    {
-        int Experience { get; }
+﻿using StrawberryAdventure.Contracts;
+using System.Collections;
+using System.Collections.Generic;
 
-        int ExperienceForNextLevel { get; }
+namespace StrawberryAdventure.Contracts
+{
+    public interface IHuman : ICharacter
+    {
+        ICollection<IItem> Items { get; }
+
+        void AddItem(IItem item);       
     }
 }

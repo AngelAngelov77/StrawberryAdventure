@@ -58,54 +58,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IGame.cs" />
+    <Compile Include="Contracts\IItem.cs" />
     <Compile Include="Contracts\ICharacter.cs" />
     <Compile Include="Contracts\IHuman.cs" />
-    <Compile Include="Contracts\IIdentifiable.cs" />
-    <Compile Include="Contracts\IInvetory.cs" />
     <Compile Include="Contracts\INPC.cs" />
-    <Compile Include="Enums\ActionType.cs" />
-    <Compile Include="Enums\BodyPositions.cs" />
-    <Compile Include="Enums\InteractionType.cs" />
-    <Compile Include="Enums\ItemPositions.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="Engine\Map.cs" />
+    <Compile Include="Enums\HumanType.cs" />
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\MapObjectType.cs" />
-    <Compile Include="General\GameInterface.cs" />
-    <Compile Include="General\GlobalConstants.cs" />
-    <Compile Include="General\Identifiable.cs" />
-    <Compile Include="General\LevelingModel.cs" />
-    <Compile Include="Engine\Chest.cs" />
-    <Compile Include="Engine\Map.cs" />
-    <Compile Include="Engine\MapObject.cs" />
+    <Compile Include="Enums\NPCType.cs" />
+    <Compile Include="Enums\StatType.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Shield.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Engine\Game.cs" />
-    <Compile Include="Units\Character\Assassin.cs" />
-    <Compile Include="Units\Character\BasicCharacter.cs" />
-    <Compile Include="Units\Character\Character.cs" />
-    <Compile Include="Units\Character\Inventory.cs" />
-    <Compile Include="Units\Character\Tank.cs" />
-    <Compile Include="Units\Character\Warrior.cs" />
-    <Compile Include="Units\Items\Armor.cs" />
-    <Compile Include="Units\Items\BasicItem.cs" />
-    <Compile Include="Units\Items\Boots.cs" />
-    <Compile Include="Units\Items\Drops.cs" />
-    <Compile Include="Units\Items\Gloves.cs" />
-    <Compile Include="Units\Items\Helmet.cs" />
-    <Compile Include="Units\Items\Leggings.cs" />
-    <Compile Include="Units\Items\Necklace.cs" />
-    <Compile Include="Units\Items\Ring.cs" />
-    <Compile Include="Units\Items\Weapon.cs" />
-    <Compile Include="Units\NPC\ItemsDrop.cs" />
-    <Compile Include="Units\NPC\NPC.cs" />
-    <Compile Include="Utils\ConsoleReader.cs" />
-    <Compile Include="Utils\ConsoleWriter.cs" />
-    <Compile Include="Utils\ItemGenerator.cs" />
-    <Compile Include="Utils\MapGenerator.cs" />
-    <Compile Include="Utils\NPCGenerator.cs" />
-    <Compile Include="Utils\RandomGenerator.cs" />
+    <Compile Include="Characters\Humans\Assassin.cs" />
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Humans\Human.cs" />
+    <Compile Include="Characters\Humans\Tank.cs" />
+    <Compile Include="Characters\Humans\Warrior.cs" />
+    <Compile Include="Characters\NPCs\Cyclops.cs" />
+    <Compile Include="Characters\NPCs\Golem.cs" />
+    <Compile Include="Characters\NPCs\Wolf.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\InvalidGameValueException.cs" />
+    <Compile Include="Utils\Validator.cs" />
+    <Compile Include="Items\Armor.cs" />
+    <Compile Include="Items\Weapon.cs" />
+    <Compile Include="Characters\NPCs\NPC.cs" />
+    <Compile Include="Utils\Generator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Utils\StrawberryAdventureDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

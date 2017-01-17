@@ -1,10 +1,11 @@
-﻿namespace StrawberryAdventure
+﻿namespace StrawberryAdventure.Enums
 {
     public enum MapObjectType
     {
         Empty,
+        Rock,
         Chest,
         NPC,
-        Obstracle
+        Goal
     }
 }

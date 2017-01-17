@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 
-namespace StrawberryAdventure
+namespace StrawberryAdventure.Contracts
 {
-    public interface INPC
+    public interface INPC : ICharacter
     {
-        BasicItem DroppingItems { get; }
-
-        BasicItem ItemsDropped();
-    }
+        IItem DropItem();
+	﻿}
 }

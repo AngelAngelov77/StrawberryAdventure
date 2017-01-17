@@ -1,6 +1,6 @@
-﻿namespace StrawberryAdventure
+﻿namespace StrawberryAdventure.Contracts
 {
-    public interface ICharacter : IIdentifiable
+    public interface ICharacter
     {
         string Name { get; }
 
@@ -8,6 +8,6 @@
 
         int Defense { get; }
 
-        int HitPoints { get; }
+        int HitPoints { get; set; }
     }
 }

@@ -1,125 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace StrawberryAdventure
+﻿namespace StrawberryAdventure.Engine
 {
-    public class Map
+    using System;
+    using System.IO;
+    using System.Linq;
+    using Utils;
+
+    public static class Map
     {
-        private StrawberryAdventure.MapObject[,] _layout;
-        private int _width;
-        private int _height;
-        private List<NPC> _monsters;
-        private List<BasicItem> _items;
-        private Character _strawberryHero;
-        private string[] _itemPrefix = { "Wood", "Stone", "Iron", "Steel", "Mithril" };
+        public const string MapLegend = "Map legend: | You: V | Texture: - | Rock: # | Chest: o | Enemy: @ | Goal: X |";
 
-        public Map(int width, int height)
+        private static char[,] gameMap;
+        private static string path;
+
+        static Map()
         {
-            Width = width;
-            Height = height;
+            CurrRow = Constants.InitialRow;
+            CurrCol = Constants.InitialCol;
+            path = Generator.GetRandomMap();
+            ReadMap(path);         
         }
 
-        public Map(MapObject[,] layout)
-        {
-            Width = layout.GetLength(0);
-            Height = layout.GetLength(1);
-            _layout = layout;
-        }
+        public static int CurrRow { get; set; }
+        public static int CurrCol { get; set; }
+        public static char[,] GameMap { get { return gameMap; } }               
 
-        public Map(int width,
-                   int height,
-                   int obstruclesCount,
-                   int monstersCount,
-                   int chestsCount,
-                   string heroName)
+        private static void ReadMap(string path)
         {
-            this.Width = width;
-            this.Height = height;
-            this.GenerateLayout(obstruclesCount, monstersCount, chestsCount);
-            //this._strawberryHero = new Character();
-        }
-
-        public int Width
-        {
-            get
+            bool isFirst = true;
+            using(var reader = new StreamReader(path))
             {
-                return _width;
-            }
-
-            private set
-            {
-                if (value >= 20)
+                if (isFirst)
                 {
-                    _width = value;
+                    isFirst = false;
+                    var rowsAndCols = reader.ReadLine().Split('x').Select(int.Parse).ToList();
+                    gameMap = new char[rowsAndCols[0], rowsAndCols[1]];
                 }
-                else
+
+                for (int rows = 0; rows < gameMap.GetLength(0); rows++)
                 {
-                    throw new ArgumentOutOfRangeException("Map width should be no less than 20");
+                    var line = reader.ReadLine().ToCharArray();
+                    for (int cols = 0; cols < gameMap.GetLength(1); cols++)
+                    {
+                        gameMap[rows, cols] = line[cols];
+                    }
                 }
             }
         }
 
-        public int Height
+        public static void PrintMap()
         {
-            get
+            Console.WriteLine();
+            for (int rows = 0; rows < gameMap.GetLength(0); rows++)
             {
-                return _height;
-            }
-
-            private set
-            {
-                if (value >= 20)
+                for (int cols = 0; cols < gameMap.GetLength(1); cols++)
                 {
-                    _height = value;
+                    Console.Write(gameMap[rows, cols]);
                 }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("Map height should be no less than 20");
-                }
-            }
-        }
-
-        public MapObject[,] Layout
-        {
-            get
-            {
-                return _layout;
-            }
-        }
-
-        public void SetLayout(MapObject[,] layout)
-        {
-            if (layout.GetLength(0) == Width && layout.GetLength(1) == Height)
-            {
-                _layout = layout;
-            }
-        }
-
-        public INPC[] Monsters
-        {
-            get
-            {
-                throw new System.NotImplementedException();
+                Console.WriteLine();
             }
 
-            set
-            {
-            }
+            Console.WriteLine(Map.MapLegend);
+            Console.WriteLine();
         }
-
-        private void GenerateLayout(int obstruclesCount,
-            int monstersCount,
-            int chestsCount)
-        {
-            
-        }
-
-        private void GenerateItems()
-        {
-            for (int i = 0; i <= 5; i++)
-            {
-                //_items.Add(new object());
-            }
-        }
+        
     }
 }
